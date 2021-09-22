@@ -16,7 +16,6 @@
             $queryInsertCustomer = "INSERT INTO customer (first_name, middle_name, last_name, contact_number, birthday, email_address, password) VALUES ('$first_name', '$middle_name', '$last_name', '$contact_number', '$birthday', '$email_address', '$password');";
 
             $sqlInsert = mysqli_query($connect, $queryInsertCustomer) OR trigger_error('Query failed SQL: '. $queryInsertCustomer);
-            die;
 
             echo "<script> window.location.href = 'customerLogin.html'; </script>";
         }
