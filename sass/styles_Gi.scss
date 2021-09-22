@@ -1,0 +1,201 @@
+// Background Colors
+$bodyBackgroundColor: #fcf9f4;
+$navBackgroundColor: #fb6f17; //rgb(49, 53, 55);//old meralco orange - rgb(255, 115, 0) #e75b00;//orange - #ff5d00 | gold - rgb(253, 165, 15) | orange - #ff5d00 | gold - rgb(255, 174, 66) | gold - rgb(249, 166, 2)
+$innerNavBackgroundColor: #58595b;//rgb(128, 128, 128);//rgb(49, 53, 55);
+$navHoverBackgroundColor: white;
+$buttonColor: #766161;
+$footerServicesBackgroundColor: #FDF2ED;//#F4E6D5;//#CECFCB; //#E4D7D0;//#d8d1c9; // #c9c2ba; //#d8d1c9;//rgb(211, 211, 211);//#aaa9ad | rgb(169, 169, 169) |#f3f3f3 | #d8e1e7
+
+
+// Font-color
+$navTextColor: white;
+$navHoverTextColor: #2F5061;
+
+
+// Font-size
+$bodyTextSize: 16px;
+
+
+// Borders
+$roundedBorder: 3px;
+$inputBorder: 1px solid #E4E5E8;
+
+
+// Positions
+$navHeight: 10vh;
+
+@mixin flexCenter($itemAlignment) {
+    display: flex;
+    justify-content: center;
+    align-items: $itemAlignment;
+}
+
+@mixin pageSpacer {
+    height: 10vh;
+    width: 100%;
+}
+
+//Start of Content
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $bodyBackgroundColor;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav {
+    padding-top: 25px;
+    background-color: $navBackgroundColor;
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+    .innerNav {
+        @include flexCenter(center);
+
+        height: $navHeight;
+        background: $innerNavBackgroundColor;
+        color: $navTextColor;
+        border-radius: $roundedBorder;
+
+        h1{
+            margin-left: 5vw;
+            margin-right: 5vw;
+        }
+
+        a {
+            margin-left: 0.75vw;
+            margin-right: 0.75vw;
+            text-decoration: none;
+            display: block;
+            color: $navTextColor;
+            font-size: 23px;
+            padding: 7px;
+
+            &:hover {
+                background-color: $navHoverBackgroundColor;
+                color: $navHoverTextColor;
+                border-radius: $roundedBorder;
+            }
+        }
+    }
+}
+
+.navbarBrand {
+    height: 8vh;
+}
+
+.pageTopSpacer {
+    @include pageSpacer();
+}
+
+
+// Start of Footer
+footer {
+    padding-bottom: 5px;
+    background-color: $navBackgroundColor;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footerServices {
+    @include flexCenter(flex-start);
+    background-color: $footerServicesBackgroundColor;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+}
+
+.footerServicesColumn {
+    margin: 0 2vw auto 2vw;
+}
+
+.footerServicesBullets {
+    list-style-type: none;
+}
+
+.footerServicesLink {
+    text-decoration: none;
+    color: #53565A;
+    &:hover {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.footerBottom {
+    @include flexCenter(flex-start);
+    background-color: $innerNavBackgroundColor;
+}
+
+.footerBottomBullets {
+    list-style-type: none;
+}
+
+.footerBottomLink {
+    text-decoration: none;
+    color: white;
+    &:hover {
+        color: red;
+    }
+}
+
+.footerEnd {
+    background-color: $innerNavBackgroundColor;
+}
+
+.footerHR {
+    border: 0.5px solid #e5d59b;
+    width: 40vw;
+    margin: 0;
+    padding: 0;
+}
+
+.footerParagraph {
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+}
+
+
+/*
+@media only screen and (min-width: 200px) and (max-width: 1024px) {
+
+    .footerContainer {
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+    
+    .footerRow {
+        display: grid;
+        width: 100%;
+    }
+
+    .footerColumn {
+        font-size: 11px;
+    }
+
+    .footerColumn {
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    p {
+        padding-right: 2vh;
+        padding-left: 2vh;
+        font-size: 11px;
+    }
+}
+*/
