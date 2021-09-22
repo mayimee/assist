@@ -20,10 +20,6 @@
 
             $sqlInsertBusiness = mysqli_query($connect, $queryInsertBusiness) OR trigger_error('Query failed: ' . $queryInsertBusiness);
 
-            
-
-            die;
-
             echo "<script> window.location.href = 'servprovlogin.php' ;</script>";
         }
 
@@ -58,7 +54,7 @@
                         <select name="type_business" class="form-control">
                             <option value="" hidden>Choose One</option>
                             <option value="Sole Proprietorship">Sole Proprietorship</option>
-                            <option value="MSME">MSME</option>
+                            <option value="Partnership">Partnership</option>
                             <option value="Corporation">Corporation</option>
                         </select>
                     </div>
