@@ -19,6 +19,9 @@
             $queryInsertBusiness = "INSERT INTO service_provider (business_name, type_business, contact_number, office_address, rep_first_name, rep_last_name, email_address, password, business_image) VALUES ('$business_name', '$type_business', '$contact_number', '$address', '$rep_first_name', '$rep_last_name', '$email_address', '$password', '$business_logo');";
 
             $sqlInsertBusiness = mysqli_query($connect, $queryInsertBusiness) OR trigger_error('Query failed: ' . $queryInsertBusiness);
+
+            
+
             die;
 
             echo "<script> window.location.href = 'servprovlogin.php' ;</script>";
