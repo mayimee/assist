@@ -216,14 +216,13 @@ footer {
     
     .footerServices {
         @include flexCenter(flex-start);
-        grid-template-columns: repeat(8, auto);
         background: $footerServicesBackgroundColor;
         padding: 1vh;
 
         .footerServicesBullets {
             list-style-type: none;   
         }
-
+        
         .footerServicesLink {
             @include footerLinksDecoration(none, $footerServicesTextColor, underline);
         }
@@ -291,6 +290,8 @@ footer {
         }
     }
 }
+
+
 
 /*
 @media only screen and (min-width: 200px) and (max-width: 1024px) {
