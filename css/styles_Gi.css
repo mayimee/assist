@@ -212,8 +212,6 @@ footer .footerServices {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -ms-grid-columns: (auto)[8];
-      grid-template-columns: repeat(8, auto);
   background: #FFE8D6;
   padding: 1vh;
 }
