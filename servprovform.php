@@ -20,10 +20,6 @@
 
             $sqlInsertBusiness = mysqli_query($connect, $queryInsertBusiness) OR trigger_error('Query failed: ' . $queryInsertBusiness);
 
-            
-
-            die;
-
             echo "<script> window.location.href = 'servprovlogin.php' ;</script>";
         }
 
@@ -41,7 +37,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_Gi.css" rel="stylesheet">
 </head>
 <body>
 
@@ -58,7 +54,7 @@
                         <select name="type_business" class="form-control">
                             <option value="" hidden>Choose One</option>
                             <option value="Sole Proprietorship">Sole Proprietorship</option>
-                            <option value="MSME">MSME</option>
+                            <option value="Partnership">Partnership</option>
                             <option value="Corporation">Corporation</option>
                         </select>
                     </div>

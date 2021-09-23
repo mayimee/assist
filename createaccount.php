@@ -2,8 +2,7 @@
 
     require('server.php');
 
-    function addCustomer(){
-        if (isset($_POST['submitcustomer']))
+    if (isset($_POST['submitcustomer']))
         {
             $first_name = $_POST['first_name'];
             $middle_name = $_POST['middle_name'];
@@ -15,10 +14,9 @@
 
             $queryInsertCustomer = "INSERT INTO customer (first_name, middle_name, last_name, contact_number, birthday, email_address, password) VALUES ('$first_name', '$middle_name', '$last_name', '$contact_number', '$birthday', '$email_address', '$password');";
 
-            $sqlInsert = mysqli_query($connect, $queryInsertCustomer) OR trigger_error('Query failed SQL: '. $queryInsertCustomer);
+            $sqlInsertCustomer = mysqli_query($connect, $queryInsertCustomer) OR trigger_error('Query failed SQL: '. $queryInsertCustomer);
 
             echo "<script> window.location.href = 'customerLogin.html'; </script>";
         }
-    } 
 
 ?>
