@@ -4,17 +4,27 @@ $navBackgroundColor: #fb6f17; // rgb(251, 111, 23); // hsl(23, 96.6%, 53.7%);
 $innerNavBackgroundColor: #58595b;
 $navHoverBackgroundColor: white;
 $buttonColor: #766161;
-$footerServicesBackgroundColor: #FDF2ED;
+$footerServicesBackgroundColor: #FFE8D6;//#F6DCBF; // #FDF2ED;
 
 // Font-color
 $navTextColor: white;
-$navHoverTextColor: #2F5061;
+$footerServicesTextColor: #53565A;
 
 
 // Font-size
 $bodyTextSize: 16px;
 $searchCalendarTextSize: 14px;
 
+// Text decoration
+@mixin footerLinksDecoration($textDecoration, $color, $hoverTextDecoration) {
+    text-decoration: $textDecoration;
+    color: $color;
+    font-size: 14px;
+    margin-left: .25vw;
+    &:hover {
+        text-decoration: $hoverTextDecoration;
+    }
+}
 
 // Borders
 $roundedBorder: 3px;
@@ -34,7 +44,7 @@ $navInputMargin: 0.25vw;
 }
 
 @mixin pageSpacer {
-    height: 10vh;
+    height: 15vh;
     width: 100%;
 }
 
@@ -203,15 +213,27 @@ footer {
     background: linear-gradient(to bottom, red, $navBackgroundColor);//$navBackgroundColor;
     width: 100%;
     margin-top: auto;
-
+    
     .footerServices {
         @include flexCenter(flex-start);
+        grid-template-columns: repeat(8, auto);
         background: $footerServicesBackgroundColor;
-        padding-top: 1.5vh;
-        padding-bottom: 1.5vh;
+        padding: 1vh;
 
-        .footerServicesColumn {
-            margin: 0 2vw auto 2vw;
+        .footerServicesBullets {
+            list-style-type: none;   
+        }
+
+        .footerServicesLink {
+            @include footerLinksDecoration(none, $footerServicesTextColor, underline);
+        }
+        
+        .footerBoldTextServices {
+            font-weight: bold;
+            font-size: 12px;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     
@@ -222,126 +244,53 @@ footer {
         .footerBottomBullets {
             list-style-type: none;
 
-            .footerBottomLink {
-                text-decoration: none;
+            .footerBoldTextBottom {
                 color: white;
-                &:hover {
-                    color: red;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .footerBottomLink {
+                @include footerLinksDecoration(none, $navTextColor, underline);
                 }
+            
+            .footerBottomLinkNoLine {
+                @include footerLinksDecoration(none, $navTextColor, none);
+                }
+
+            .footerBottomIconLabel {
+                display: flex;
             }
         }
-    }
 
+        img {
+            height: 15px;
+            margin-right: .25vw;
+            margin-left: .3vw;
+        }
+    }
+    
     .footerEnd {
         background: $innerNavBackgroundColor;
 
         .footerHR {
-            border: 0.25px solid white;
-            width: 40vw;
+            border: 1px solid white;
+            width: 30vw;
             margin: auto;
-            padding: 0;
         }
 
         .footerParagraph {
             text-align: center;
             color: white;
             font-size: 13px;
-            padding-top: 1vh;
             padding-bottom: 2vh;
+        }
+
+        .footerEndLink {
+            @include footerLinksDecoration(none, $navTextColor, underline);
         }
     }
 }
-
-.footerServicesBullets {
-    list-style-type: none;   
-}
-
-.footerServicesLink {
-    text-decoration: none;
-    color: #53565A;
-    &:hover {
-        color: white;
-        font-weight: bold;
-    }
-}
-
-.footerBoldText {
-    font-weight: bold;
-    font-size: 12px;
-}
-
-/*
-
-// Start of Footer
-footer {
-    padding-bottom: 5px;
-    background: linear-gradient(to bottom, red, $navBackgroundColor);//$navBackgroundColor;
-    width: 100%;
-    margin-top: auto;
-}
-
-.footerServices {
-    @include flexCenter(flex-start);
-    background: $footerServicesBackgroundColor;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
-}
-
-.footerServicesColumn {
-    margin: 0 2vw auto 2vw;
-}
-
-.footerServicesBullets {
-    list-style-type: none;
-}
-
-.footerServicesLink {
-    text-decoration: none;
-    color: #53565A;
-    &:hover {
-        color: white;
-        font-weight: bold;
-    }
-}
-
-.footerBottom {
-    @include flexCenter(flex-start);
-    background: $innerNavBackgroundColor;
-}
-
-.footerBottomBullets {
-    list-style-type: none;
-}
-
-.footerBottomLink {
-    text-decoration: none;
-    color: white;
-    &:hover {
-        color: red;
-    }
-}
-
-.footerEnd {
-    background: $innerNavBackgroundColor;
-}
-
-.footerHR {
-    border: 0.5px solid #e5d59b;
-    width: 40vw;
-    margin: 0;
-    padding: 0;
-}
-
-.footerParagraph {
-    text-align: center;
-    color: white;
-    font-size: 13px;
-    padding-top: 1vh;
-    padding-bottom: 2vh;
-}
-
-*/
-
 
 /*
 @media only screen and (min-width: 200px) and (max-width: 1024px) {
