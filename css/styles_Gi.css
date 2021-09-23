@@ -190,7 +190,7 @@ nav .innerNav img {
 }
 
 .pageTopSpacer {
-  height: 10vh;
+  height: 15vh;
   width: 100%;
 }
 
@@ -212,13 +212,34 @@ footer .footerServices {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background: #FDF2ED;
-  padding-top: 1.5vh;
-  padding-bottom: 1.5vh;
+  -ms-grid-columns: (auto)[8];
+      grid-template-columns: repeat(8, auto);
+  background: #FFE8D6;
+  padding: 1vh;
 }
 
-footer .footerServices .footerServicesColumn {
-  margin: 0 2vw auto 2vw;
+footer .footerServices .footerServicesBullets {
+  list-style-type: none;
+}
+
+footer .footerServices .footerServicesLink {
+  text-decoration: none;
+  color: #53565A;
+  font-size: 14px;
+  margin-left: .25vw;
+}
+
+footer .footerServices .footerServicesLink:hover {
+  text-decoration: underline;
+}
+
+footer .footerServices .footerBoldTextServices {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+footer .footerServices .footerBoldTextServices:hover {
+  text-decoration: underline;
 }
 
 footer .footerBottom {
@@ -238,13 +259,44 @@ footer .footerBottom .footerBottomBullets {
   list-style-type: none;
 }
 
+footer .footerBottom .footerBottomBullets .footerBoldTextBottom {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
 footer .footerBottom .footerBottomBullets .footerBottomLink {
   text-decoration: none;
   color: white;
+  font-size: 14px;
+  margin-left: .25vw;
 }
 
 footer .footerBottom .footerBottomBullets .footerBottomLink:hover {
-  color: red;
+  text-decoration: underline;
+}
+
+footer .footerBottom .footerBottomBullets .footerBottomLinkNoLine {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  margin-left: .25vw;
+}
+
+footer .footerBottom .footerBottomBullets .footerBottomLinkNoLine:hover {
+  text-decoration: none;
+}
+
+footer .footerBottom .footerBottomBullets .footerBottomIconLabel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footerBottom img {
+  height: 15px;
+  margin-right: .25vw;
+  margin-left: .3vw;
 }
 
 footer .footerEnd {
@@ -252,110 +304,29 @@ footer .footerEnd {
 }
 
 footer .footerEnd .footerHR {
-  border: 0.25px solid white;
-  width: 40vw;
+  border: 1px solid white;
+  width: 30vw;
   margin: auto;
-  padding: 0;
 }
 
 footer .footerEnd .footerParagraph {
   text-align: center;
   color: white;
   font-size: 13px;
-  padding-top: 1vh;
   padding-bottom: 2vh;
 }
 
-.footerServicesBullets {
-  list-style-type: none;
-}
-
-.footerServicesLink {
+footer .footerEnd .footerEndLink {
   text-decoration: none;
-  color: #53565A;
-}
-
-.footerServicesLink:hover {
   color: white;
-  font-weight: bold;
+  font-size: 14px;
+  margin-left: .25vw;
 }
 
-.footerBoldText {
-  font-weight: bold;
-  font-size: 12px;
+footer .footerEnd .footerEndLink:hover {
+  text-decoration: underline;
 }
 
-/*
-
-// Start of Footer
-footer {
-    padding-bottom: 5px;
-    background: linear-gradient(to bottom, red, $navBackgroundColor);//$navBackgroundColor;
-    width: 100%;
-    margin-top: auto;
-}
-
-.footerServices {
-    @include flexCenter(flex-start);
-    background: $footerServicesBackgroundColor;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
-}
-
-.footerServicesColumn {
-    margin: 0 2vw auto 2vw;
-}
-
-.footerServicesBullets {
-    list-style-type: none;
-}
-
-.footerServicesLink {
-    text-decoration: none;
-    color: #53565A;
-    &:hover {
-        color: white;
-        font-weight: bold;
-    }
-}
-
-.footerBottom {
-    @include flexCenter(flex-start);
-    background: $innerNavBackgroundColor;
-}
-
-.footerBottomBullets {
-    list-style-type: none;
-}
-
-.footerBottomLink {
-    text-decoration: none;
-    color: white;
-    &:hover {
-        color: red;
-    }
-}
-
-.footerEnd {
-    background: $innerNavBackgroundColor;
-}
-
-.footerHR {
-    border: 0.5px solid #e5d59b;
-    width: 40vw;
-    margin: 0;
-    padding: 0;
-}
-
-.footerParagraph {
-    text-align: center;
-    color: white;
-    font-size: 13px;
-    padding-top: 1vh;
-    padding-bottom: 2vh;
-}
-
-*/
 /*
 @media only screen and (min-width: 200px) and (max-width: 1024px) {
 
