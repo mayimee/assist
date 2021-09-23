@@ -1,11 +1,10 @@
 // Background Colors
 $bodyBackgroundColor: #fcf9f4;
-$navBackgroundColor: #fb6f17; //rgb(49, 53, 55);//old meralco orange - rgb(255, 115, 0) #e75b00;//orange - #ff5d00 | gold - rgb(253, 165, 15) | orange - #ff5d00 | gold - rgb(255, 174, 66) | gold - rgb(249, 166, 2)
-$innerNavBackgroundColor: #58595b;//rgb(128, 128, 128);//rgb(49, 53, 55);
+$navBackgroundColor: #fb6f17; // rgb(251, 111, 23); // hsl(23, 96.6%, 53.7%);
+$innerNavBackgroundColor: #58595b;
 $navHoverBackgroundColor: white;
 $buttonColor: #766161;
-$footerServicesBackgroundColor: #FDF2ED;//#F4E6D5;//#CECFCB; //#E4D7D0;//#d8d1c9; // #c9c2ba; //#d8d1c9;//rgb(211, 211, 211);//#aaa9ad | rgb(169, 169, 169) |#f3f3f3 | #d8e1e7
-
+$footerServicesBackgroundColor: #FDF2ED;
 
 // Font-color
 $navTextColor: white;
@@ -14,15 +13,19 @@ $navHoverTextColor: #2F5061;
 
 // Font-size
 $bodyTextSize: 16px;
+$searchCalendarTextSize: 14px;
 
 
 // Borders
 $roundedBorder: 3px;
 $inputBorder: 1px solid #E4E5E8;
+$inputBorderRadius: 3px;
 
 
 // Positions
 $navHeight: 10vh;
+$searchCalendarPadding: 7px;
+$navInputMargin: 0.25vw;
 
 @mixin flexCenter($itemAlignment) {
     display: flex;
@@ -35,18 +38,48 @@ $navHeight: 10vh;
     width: 100%;
 }
 
+// Others
+
+// Search bar
+@mixin search() {
+    padding: $searchCalendarPadding;
+    font-size: $searchCalendarTextSize;
+    border: 1px solid grey;
+    border-top-left-radius: $inputBorderRadius;
+    border-bottom-left-radius: $inputBorderRadius;
+    float: left;
+    background: white;
+}
+
+// Search bar button
+@mixin searchButton {
+    float: left;
+    color: $innerNavBackgroundColor;
+    padding: $searchCalendarPadding;
+    background: white;
+    font-size: $searchCalendarTextSize;
+    border: 1px solid grey;
+    border-top-right-radius: $inputBorderRadius;
+    border-bottom-right-radius: $inputBorderRadius;
+    border-left: none; /* Prevent double borders */    
+    &:hover {
+    color: $navBackgroundColor;
+    }
+}
+
 //Start of Content
 html {
     height: 100%;
 }
 
 body {
-    background-color: $bodyBackgroundColor;
+    background: $bodyBackgroundColor;
     height: 100%;
     display: flex;
     flex-direction: column;
     min-height: 100%;
     margin: 0;
+    cursor: pointer;
 }
 
 * {
@@ -55,11 +88,12 @@ body {
 }
 
 nav {
-    padding-top: 25px;
-    background-color: $navBackgroundColor;
-    width: 100%;
     position: fixed;
     top: 0;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 1px;
+    background: linear-gradient(to bottom, $navBackgroundColor, red);
 
     .innerNav {
         @include flexCenter(center);
@@ -67,51 +101,188 @@ nav {
         height: $navHeight;
         background: $innerNavBackgroundColor;
         color: $navTextColor;
-        border-radius: $roundedBorder;
 
         h1{
             margin-left: 5vw;
             margin-right: 5vw;
         }
 
-        a {
-            margin-left: 0.75vw;
-            margin-right: 0.75vw;
+        .loginButton {
+            margin-left: 0.5vw;
+            margin-right: 0.5vw;
             text-decoration: none;
             display: block;
-            color: $navTextColor;
-            font-size: 23px;
-            padding: 7px;
-
+            color: white;
+            font-size: 15px;
+            padding-top: $searchCalendarPadding;
+            padding-bottom: $searchCalendarPadding;
+            padding-right: $searchCalendarPadding * 2;
+            padding-left: $searchCalendarPadding * 2;
+            background: $navBackgroundColor; // linear-gradient(to top, red, $navBackgroundColor);
+            border-radius: $inputBorderRadius;
+            font-weight: bold;
             &:hover {
-                background-color: $navHoverBackgroundColor;
-                color: $navHoverTextColor;
-                border-radius: $roundedBorder;
+                text-decoration: underline;
             }
+        }
+
+        .navServiceProviderLink {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        img {
+            height: 8.5vh;
         }
     }
 }
 
-.navbarBrand {
-    height: 8vh;
+// Navbar search service field
+.searchServiceContainer {
+    @include flexCenter(center);
+    margin-left: 1.25vw;
+    margin-right: $navInputMargin;
+
+    .searchService input[type=text] {
+        @include search;
+        width: 13vw;
+    }
+
+    .searchService button {
+        @include searchButton;
+    }
+}
+
+#serviceDate {
+    padding: $searchCalendarPadding - 2.5px;
+    font-size: $searchCalendarTextSize;
+    border-radius: $inputBorderRadius;
+    color: #777777;// #8e8e8e; // #999; // #a9a9a9;
+    border: 1px solid grey;
+    border-radius: $inputBorderRadius;
+    background: white;
+    width: 9vw;
+    margin-right: $navInputMargin;
+    margin-left: $navInputMargin;
+}
+
+// Navbar search address field
+.searchAddressContainer {
+    @include flexCenter(center);
+    margin-right: $navInputMargin;
+    margin-left: $navInputMargin;
+
+    .searchAddress input[type=text] {
+        @include search;
+        width: 10vw;
+    }
+
+    .searchAddress button {
+        @include searchButton;
+    }
+
+    // Clear floats in the search bar
+    form.searchAddress::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
 }
 
 .pageTopSpacer {
-    @include pageSpacer();
+    @include pageSpacer;
 }
 
 
 // Start of Footer
 footer {
     padding-bottom: 5px;
-    background-color: $navBackgroundColor;
+    background: linear-gradient(to bottom, red, $navBackgroundColor);//$navBackgroundColor;
+    width: 100%;
+    margin-top: auto;
+
+    .footerServices {
+        @include flexCenter(flex-start);
+        background: $footerServicesBackgroundColor;
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh;
+
+        .footerServicesColumn {
+            margin: 0 2vw auto 2vw;
+        }
+    }
+    
+    .footerBottom {
+        @include flexCenter(flex-start);
+        background: $innerNavBackgroundColor;
+
+        .footerBottomBullets {
+            list-style-type: none;
+
+            .footerBottomLink {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    .footerEnd {
+        background: $innerNavBackgroundColor;
+
+        .footerHR {
+            border: 0.25px solid white;
+            width: 40vw;
+            margin: auto;
+            padding: 0;
+        }
+
+        .footerParagraph {
+            text-align: center;
+            color: white;
+            font-size: 13px;
+            padding-top: 1vh;
+            padding-bottom: 2vh;
+        }
+    }
+}
+
+.footerServicesBullets {
+    list-style-type: none;   
+}
+
+.footerServicesLink {
+    text-decoration: none;
+    color: #53565A;
+    &:hover {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.footerBoldText {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/*
+
+// Start of Footer
+footer {
+    padding-bottom: 5px;
+    background: linear-gradient(to bottom, red, $navBackgroundColor);//$navBackgroundColor;
     width: 100%;
     margin-top: auto;
 }
 
 .footerServices {
     @include flexCenter(flex-start);
-    background-color: $footerServicesBackgroundColor;
+    background: $footerServicesBackgroundColor;
     padding-top: 1.5vh;
     padding-bottom: 1.5vh;
 }
@@ -135,7 +306,7 @@ footer {
 
 .footerBottom {
     @include flexCenter(flex-start);
-    background-color: $innerNavBackgroundColor;
+    background: $innerNavBackgroundColor;
 }
 
 .footerBottomBullets {
@@ -151,7 +322,7 @@ footer {
 }
 
 .footerEnd {
-    background-color: $innerNavBackgroundColor;
+    background: $innerNavBackgroundColor;
 }
 
 .footerHR {
@@ -168,6 +339,8 @@ footer {
     padding-top: 1vh;
     padding-bottom: 2vh;
 }
+
+*/
 
 
 /*
