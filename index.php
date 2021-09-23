@@ -3,7 +3,13 @@
 <head>
     <title>Assist</title>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".//css/Styles.css">
+    <link rel="stylesheet" href=".//css/styles_Gi.css">
+
+    <!-- Search icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   
+
 </head>
 
 <body>
@@ -12,9 +18,24 @@
 <nav>
     <div class="innerNav">
         <img src="./images/Assist2_NavBar.png" class="navbarBrand">
-        <a href="#login">Login</a>
-        <a href="#signup">Signup</a>
-        <a href="#serviceProvider">Service Provider</a>
+        <div class="searchServiceContainer">
+            <form class="searchService" action="action_page.php">
+                <input type="text" placeholder="Search services..." id="searchService">
+                <button type="submit"><span class="fa fa-search"></span></button>
+            </form>
+        </div>
+        <form class="calendar">
+            <label for="serviceDate"></label>
+            <input type="date" id="serviceDate" min="" onfocus="this.min=new Date().toISOString().split('T')[0]">
+        </form>
+        <div class="searchAddressContainer">
+            <form class="searchAddress" action="action_page.php">
+                <input type="text" placeholder="Enter city address..." name="search">
+                <button type="submit"><span class="fa fa-search"></span></button>
+            </form>
+        </div>
+        <a href="#loginSignup" class="loginButton">Login / Signup</a>
+        <a href="#serviceProvider" class="navServiceProviderLink">Be a  Service Provider</a>
     </div>
 </nav>
 
@@ -39,64 +60,65 @@ This is the body!
 <footer>
     <div class="footerServices">
         <div class="footerservicesColumn">
-            <h4>CLEANING & MAINTENANCE</h4>
             <ul class="footerServicesBullets">
+                <li><span class="footerBoldText">CLEANING & MAINTENANCE</span></li>
                 <li><a class="footerServicesLink" href="#">Aircon cleaning</a></li>
                 <li><a class="footerServicesLink" href="#">Area disinfection</a></li>
                 <li><a class="footerServicesLink" href="#">Gardening</a></li>
                 <li><a class="footerServicesLink" href="#">Housekeeping</a></li>
                 <li><a class="footerServicesLink" href="#">Ironing</a></li>
                 <li><a class="footerServicesLink" href="#">Laundry</a></li>
-                <li><a class="footerServicesLink" href="#">Pest extermination</a></li>
+                <li><a class="footerServicesLink" href="#">Pest extermination</a>
             </ul>
         </div>
         <div class="footerservicesColumn">
-            <h4>CONSTRUCTION</h4>
             <ul class="footerServicesBullets">
+                <li><span class="footerBoldText">CONSTRUCTION</span></li>
                 <li><a class="footerServicesLink" href="#">Carpentry</a></li>
                 <li><a class="footerServicesLink" href="#">Paint works</a></li>
                 <li><a class="footerServicesLink" href="#">Plumbing</a></li>
             </ul>
         </div>
         <div class="footerservicesColumn">
-            <h4>COMPUTER REPAIR& MAINTENANCE</h4>
             <ul class="footerServicesBullets">
-                <li><a class="footerServicesLink" href="#">Reformat</a></li>
+                <li><span class="footerBoldText">COMPUTER REPAIR& MAINTENANCE</span></li>
+                <li><a class="footerServicesLink" href="#">Computer reformat</a></li>
+                <li><a class="footerServicesLink" href="#">Hardware repair</a></li>
             </ul>
         </div>
         <div class="footerservicesColumn">
-            <h4>APPLIANCE REPAIR</h4>
             <ul class="footerServicesBullets">
+                <li><span class="footerBoldText">APPLIANCE REPAIR</span></li>
                 <li><a class="footerServicesLink" href="#">Electric fan</a></li>
                 <li><a class="footerServicesLink" href="#">TV</a></li>
                 <li><a class="footerServicesLink" href="#">Washing machine</a></li>
             </ul>
         </div>
         <div class="footerservicesColumn">
-            <h4>EVENTS</h4>
             <ul class="footerServicesBullets">
+                <li><span class="footerBoldText">EVENTS</span></li>
                 <li><a class="footerServicesLink" href="#">Photography</a></li>
                 <li><a class="footerServicesLink" href="#">Hosting / Emcee</a></li>
             </ul>
         </div>
         <div class="footerservicesColumn">
-            <h4>TRANSPORT</h4>
             <ul class="footerServicesBullets">
+                <li><span class="footerBoldText">TRANSPORT</span></li>
                 <li><a class="footerServicesLink" href="#">Driver for hire</a></li>
                 <li><a class="footerServicesLink" href="#">Driving lesson</a></li>
                 <li><a class="footerServicesLink" href="#">Rent a vehicle</a></li>
             </ul>
         </div>
         <div class="footerservicesColumn">
-            <h4>VEHICLE REPAIR</h4>
             <ul class="footerServicesBullets">
+                <li><span class="footerBoldText">VEHICLE REPAIR</span></li>
                 <li><a class="footerServicesLink" href="#">Engine overhaul</a></li>
                 <li><a class="footerServicesLink" href="#">Change oil</a></li>
             </ul>
         </div>
         <div class="footerservicesColumn">
-            <h4>WELLNESS & PERSONAL GROOMING</h4>
             <ul class="footerServicesBullets">
+                <li><span class="footerBoldText">WELLNESS & PERSONAL GROOMING</span></li>
                 <li><a class="footerServicesLink" href="#">Footspa</a></li>
                 <li><a class="footerServicesLink" href="#">Haircut</a></li>
                 <li><a class="footerServicesLink" href="#">Hair treatment</a></li>
@@ -108,16 +130,16 @@ This is the body!
     </div>
     <div class="footerBottom">
         <div class="footerBottomColumn">
-            <h4>ABOUT ASSIST</h4>
             <ul class="footerBottomBullets">
+                <li><span class="footerBoldText">ABOUT ASSIST</span></li>
                 <li><a class="footerBottomLink" href="#">How Assist Works</a></li>
                 <li><a class="footerBottomLink" href="#">Affiliate Program</a></li>
                 <li><a class="footerBottomLink" href="#">Work Opportunities</a></li>
             </ul>
         </div>
         <div class="footerBottomColumn">
-            <h4>CUSTOMER CARE</h4>
             <ul class="footerBottomBullets">
+                <li><span class="footerBoldText">CUSTOMER CARE</span></li>
                 <li><a class="footerBottomLink" href="#">How to book a service?</a></li>
                 <li><a class="footerBottomLink" href="#">Assist Guarantee</a></li>
                 <li><a class="footerBottomLink" href="#">Payment Methods</a></li>
@@ -125,27 +147,27 @@ This is the body!
             </ul>
         </div>
         <div class="footerBottomColumn">
-            <h4>COLLABORATE</h4>
             <ul class="footerBottomBullets">
+                <li><span class="footerBoldText">COLLABORATE</span></li>
                 <li><a class="footerBottomLink" href="#">How to list a service?</a></li>
                 <li><a class="footerBottomLink" href="#">Be a Service Provider</a></li>
                 <li><a class="footerBottomLink" href="#">Be an affiliate</a></li>
             </ul>
         </div>
         <div class="footerBottomColumn">
-            <h4>CONTACT US</h4>
             <ul class="footerBottomBullets">
+                <li><span class="footerBoldText">CONTACT US</span></li>
                 <li><img src="./images/Icon_Email.png"><a class="footerBottomLink" href="#">info@assist.ph</a></li>
-                <li><img src="./images/Icon_Phone.png">09981923360</li>
-                <li><img src="./images/Icon_Map.png">2601 Rockefeller St.,
+                <li><img src="./images/Icon_Phone.png"><span class="footerBottomLink">09981923360</span></li>
+                <li><img src="./images/Icon_Map.png"><span class="footerBottomLink">2601 Rockefeller St.,
                     <br>San Isidro
-                    <br>Makati City
+                    <br>Makati City</span>
                 </li>
             </ul>
         </div>
         <div class="footerBottomColumn">
-            <h4>STAY CONNECTED</h4>
             <ul class="footerBottomBullets">
+                <li><span class="footerBoldText">STAY CONNECTED</span></li>
                 <li><img src=".//images/Logo_Facebook.png"><a class="footerBottomLink" href="#">Facebook</a></li>
                 <li><img src="./images/Logo_Instagram.png"><a class="footerBottomLink" href="#">Instagram</a></li>
             </ul>
@@ -156,6 +178,7 @@ This is the body!
         <p class="footerParagraph">&copy; Assist 2021 | All rights reserved | <span class="footerEndLink">Terms of Use</span> | <span class="footerEndLink">Privacy Policy</span></p>
     </div>
 </footer>
+
 
 </body>
 </html>
