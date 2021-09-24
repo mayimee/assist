@@ -6,23 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Registration</title>
 
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
-
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href=".//css/styles_Gi.css">
+    <?php require('css.php'); ?>
 
 </head>
 <body>
 
 <?php require('navbar.php'); ?>
-    
-<div class="pageTopSpacer"></div>
 
-    <main class="p-5">
+    <main class="p-5 mt-5">
         <div class="container">
+            <br>
+            <br>
             <form action="createaccount.php" method="POST" class="form-control">
-                <h3>Customer Registration</h3>
+                <h3 class="text-center">Customer Registration</h3>
                 <div class="row">
                     <div class="col-sm-4 mt-3 mb-3">
                         <label for="first_name" class="form-label">First Name</label>
@@ -56,7 +52,7 @@
                     </div>
                     <div class="col-sm-6 mt-3 mb-3">
                         <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" class="form-control">
+                        <input type="password" name="confirm_password" id="confirmPassword" placeholder="Confirm Password" class="form-control">
                     </div>
                     <div class="text-center">
                         <input type="checkbox" name="agree" id="agree"> I accept the Terms and Conditions.
@@ -70,6 +66,7 @@
         </div>
     </main>
 
+    <?php require('footer.php'); ?>
 
     
     <!-- JavaScript Bundle with Popper -->

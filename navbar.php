@@ -14,7 +14,7 @@
 <!--Navigation Bar-->
 <nav>
     <div class="innerNav">
-        <img src="./images/Assist2_NavBar.png" class="navbarBrand">
+        <a href="index.php"><img src="./images/Assist2_NavBar.png" class="navbarBrand"></a>
         <div class="searchServiceContainer">
             <form class="searchService" action="action_page.php">
                 <input type="text" placeholder="Search services..." id="searchService">

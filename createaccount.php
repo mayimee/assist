@@ -12,7 +12,9 @@
             $email_address = $_POST['email_address'];
             $password = $_POST['password'];
 
-            $queryInsertCustomer = "INSERT INTO customer (first_name, middle_name, last_name, contact_number, birthday, email_address, password) VALUES ('$first_name', '$middle_name', '$last_name', '$contact_number', '$birthday', '$email_address', '$password');";
+            $hash_password = password_hash($password, PASSWORD_DEFAULT);
+
+            $queryInsertCustomer = "INSERT INTO customer (first_name, middle_name, last_name, contact_number, birthday, email_address, password) VALUES ('$first_name', '$middle_name', '$last_name', '$contact_number', '$birthday', '$email_address', '$hash_password');";
 
             $sqlInsertCustomer = mysqli_query($connect, $queryInsertCustomer) OR trigger_error('Query failed SQL: '. $queryInsertCustomer);
 
