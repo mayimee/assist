@@ -18,6 +18,8 @@
 
             $hash_password = password_hash($password, PASSWORD_DEFAULT);
 
+            move_uploaded_file($temp_business_logo, "dbdump/ServProv-" . $business_logo);
+
             $queryInsertBusiness = "INSERT INTO service_provider (business_name, type_business, contact_number, office_address, rep_first_name, rep_last_name, email_address, password, business_image) VALUES ('$business_name', '$type_business', '$contact_number', '$address', '$rep_first_name', '$rep_last_name', '$email_address', '$hash_password', '$business_logo');";
 
             $sqlInsertBusiness = mysqli_query($connect, $queryInsertBusiness) OR trigger_error('Query failed: ' . $queryInsertBusiness);
@@ -39,14 +41,15 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
 
-    <link href="css/style_Gi.css" rel="stylesheet">
-    <link href="css/style_Marielle.css" rel="stylesheet">
+    <?php require('css.php'); ?>
 </head>
 <body>
 
-    <main>
-        <div class="container">
-            <form action="servprovform.php" method="POST" enctype="multipart/form-data">
+<?php require('navbar.php'); ?>
+
+    <main class="mt-5">
+        <div class="container mt-5">
+            <form action="servprovform.php" method="POST" enctype="multipart/form-data" class="form-control">
                 <div class="row">
                     <div class="col-md-12 mb-3">
                         <label for="business_name" class="form-label">Business Name</label>

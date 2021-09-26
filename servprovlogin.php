@@ -14,7 +14,13 @@
 </head>
 <body class="text-center">
 
-    <main>
+<?php require('navbar.php'); ?>
+
+    <main class="my-5 py-5">
+        <br>
+        <h2 class="align-center">
+            Service Provider Login
+        </h2>
         <form class="formSignin">
             <div class="form-floating">
                 <input type="email" name="email" id="floatingInput" placeholder="Email Address" class="form-control">
@@ -24,9 +30,18 @@
                 <input type="password" name="password" id="floatingInput" placeholder="Password" class="form-control">
                 <label for="floatingInput">Password</label>
             </div>
+            <br>
             <button type="submit" class="btn btn-primary btn-md">Sign In</button>
         </form>
     </main>
+
+    <div>
+
+        <p>New User? Click <a href="servprovreg.php">here</a> to register.</p>
+
+    </div>
+
+    <?php require('footer.php'); ?>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
