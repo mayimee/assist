@@ -1,0 +1,139 @@
+@import "./variables.scss";
+
+// Search bar
+@mixin search() {
+    padding: $searchCalendarPadding;
+    font-size: $searchCalendarTextSize;
+    border: 1px solid grey;
+    border-top-left-radius: $inputBorderRadius;
+    border-bottom-left-radius: $inputBorderRadius;
+    float: left;
+    background: white;
+}
+
+// Search bar button
+@mixin searchButton {
+    float: left;
+    color: $innerNavBackgroundColor;
+    padding: $searchCalendarPadding;
+    background: white;
+    font-size: $searchCalendarTextSize;
+    border: 1px solid grey;
+    border-top-right-radius: $inputBorderRadius;
+    border-bottom-right-radius: $inputBorderRadius;
+    border-left: none; /* Prevent double borders */    
+    &:hover {
+    color: $navBackgroundColor;
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    padding-top: 15px;
+    padding-bottom: 1px;
+    background: linear-gradient(to bottom, $navBackgroundColor, red);
+    
+    .innerNav {
+        height: $navHeight;
+        background: $innerNavBackgroundColor;
+        color: $navTextColor;
+
+        @include flexCenter(center);
+
+        h1{
+            margin-left: 5vw;
+            margin-right: 5vw;
+        }
+
+        .loginButton {
+            margin-left: 0.5vw;
+            margin-right: 0.5vw;
+            text-decoration: none;
+            display: block;
+            color: white;
+            font-size: 15px;
+            padding-top: $searchCalendarPadding;
+            padding-bottom: $searchCalendarPadding;
+            padding-right: $searchCalendarPadding * 2;
+            padding-left: $searchCalendarPadding * 2;
+            background: $navBackgroundColor; // linear-gradient(to top, red, $navBackgroundColor);
+            border-radius: $inputBorderRadius;
+            font-weight: bold;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .navServiceProviderLink {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        img {
+            height: 8.5vh;
+        }
+    }
+
+    .cartIconContainer {
+        color: white;
+        position: absolute;
+        top: 0;
+    }
+}
+
+
+// Navbar search service field
+.searchServiceContainer {
+    @include flexCenter(center);
+    margin-left: 1.25vw;
+    margin-right: $navInputMargin;
+
+    .searchService input[type=text] {
+        @include search;
+        width: 13vw;
+    }
+
+    .searchService button {
+        @include searchButton;
+    }
+}
+
+#serviceDate {
+    padding: $searchCalendarPadding - 2.5px;
+    font-size: $searchCalendarTextSize;
+    border-radius: $inputBorderRadius;
+    color: #777777;// #8e8e8e; // #999; // #a9a9a9;
+    border: 1px solid grey;
+    border-radius: $inputBorderRadius;
+    background: white;
+    width: 9vw;
+    margin-right: $navInputMargin;
+    margin-left: $navInputMargin;
+}
+
+// Navbar search address field
+.searchAddressContainer {
+    @include flexCenter(center);
+    margin-right: $navInputMargin;
+    margin-left: $navInputMargin;
+
+    .searchAddress input[type=text] {
+        @include search;
+        width: 10vw;
+    }
+
+    .searchAddress button {
+        @include searchButton;
+    }
+
+    // Clear floats in the search bar
+    form.searchAddress::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+}
