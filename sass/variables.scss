@@ -1,0 +1,48 @@
+// Background Colors
+$bodyBackgroundColor: #fcf9f4;
+$navBackgroundColor: #fb6f17; // rgb(251, 111, 23); // hsl(23, 96.6%, 53.7%);
+$innerNavBackgroundColor: #58595b;
+$navHoverBackgroundColor: white;
+$buttonColor: #766161;
+$footerServicesBackgroundColor: #FFE8D6;//#F6DCBF; // #FDF2ED;
+
+// Font-color
+$navTextColor: white;
+$footerServicesTextColor: #53565A;
+
+// Font-size
+$bodyTextSize: 16px;
+$searchCalendarTextSize: 14px;
+
+// Borders
+$roundedBorder: 3px;
+$inputBorder: 1px solid #E4E5E8;
+$inputBorderRadius: 3px;
+
+// Positions
+$navHeight: 10vh;
+$searchCalendarPadding: 7px;
+$navInputMargin: 0.25vw;
+
+// Text decoration
+@mixin footerLinksDecoration($textDecoration, $color, $hoverTextDecoration) {
+    text-decoration: $textDecoration;
+    color: $color;
+    font-size: 14px;
+    margin-left: .25vw;
+    &:hover {
+        text-decoration: $hoverTextDecoration;
+    }
+}
+
+// Positions
+@mixin flexCenter($itemAlignment) {
+    display: flex;
+    justify-content: center;
+    align-items: $itemAlignment;
+}
+
+@mixin pageSpacer {
+    height: 15vh;
+    width: 100%;
+}
