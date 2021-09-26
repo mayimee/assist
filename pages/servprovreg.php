@@ -41,15 +41,18 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
 
-    <?php require('css.php'); ?>
+    <?php require('./css.php'); ?>
 </head>
 <body>
 
-<?php require('navbar.php'); ?>
+<?php require('navbar_notLoggedIn.php'); ?>
 
     <main class="mt-5">
         <div class="container mt-5">
             <form action="servprovform.php" method="POST" enctype="multipart/form-data" class="form-control">
+                <div>
+                    <h3 class="text-center">Business Registration</h3>
+                </div>
                 <div class="row">
                     <div class="col-md-12 mb-3">
                         <label for="business_name" class="form-label">Business Name</label>
@@ -108,6 +111,8 @@
             </form>
         </div>
     </main>
+
+    <?php require('footer.php'); ?>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
