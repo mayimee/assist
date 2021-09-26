@@ -44,7 +44,7 @@
             {
                 $_SESSION['first_name'] = $row['first_name'];
                 $userAccess = "Customer";
-                header('location: customerProfile.php');
+                header('location: customerprofile.php');
             }
             else
             {
@@ -64,7 +64,6 @@
             {
                 $_SESSION['status'] = 'invalid';
                 echo "Please create an account.";
-                header('location: customerreg.php');
             }
 
         }
@@ -88,14 +87,14 @@
 </head>
 <body class="text-center">
 
-    <?php require('navbar.php'); ?>
+<?php require('navbar.php'); ?>
 
     <main class="my-5">
         <br>
         <h2 class="align-center">
             Customer Login
         </h2>
-        <form action="/customerlogin.php" method="POST" class="formSignin my-5">
+        <form action="customerlogin.php" method="POST" class="formSignin my-5">
             <div class="form-floating">
                 <input type="email" name="email_address" id="floatingInpute" placeholder="Email Address" class="form-control">
                 <label for="floatingInpute">Email Address</label>
@@ -106,10 +105,16 @@
             </div>
             <br>
             <div class="col-6 mx-auto">
-                <button type="submit" class="btn btn-primary btn-md">Sign In</button>
+                <button type="submit" name="submitcustomer" class="btn btn-primary btn-md">Sign In</button>
             </div>
         </form>
     </main>
+
+    <div>
+
+        <p>New User? Click <a href="customerreg.php">here</a> to register.</p>
+
+    </div>
 
 
     <?php require('footer.php'); ?>

@@ -31,8 +31,8 @@
                 <button type="submit"><span class="fa fa-search"></span></button>
             </form>
         </div>
-        <a href="#loginSignup" class="loginButton">Login / Signup</a>
-        <a href="#serviceProvider" class="navServiceProviderLink">Be a  Service Provider</a>
+        <a href="customerlogin.php" class="loginButton">Login / Signup</a>
+        <a href="servprovlogin.php" class="navServiceProviderLink">Be a  Service Provider</a>
     </div>
 </nav>
 
