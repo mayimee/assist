@@ -33,6 +33,7 @@ nav {
     padding-top: 15px;
     padding-bottom: 1px;
     background: linear-gradient(to bottom, $navBackgroundColor, red);
+    width: 100%;
     
     .innerNav {
         height: $navHeight;

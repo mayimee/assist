@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Registration</title>
 
-    <?php require('css.php'); ?>
+    <?php require('pages/css.php'); ?>
 
 </head>
 <body>
 
-<?php require('navbar.php'); ?>
+<?php require('navbar_notLoggedIn.php'); ?>
 
     <main class="p-5 mt-5">
         <div class="container">
