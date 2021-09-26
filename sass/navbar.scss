@@ -30,58 +30,55 @@
 nav {
     position: fixed;
     top: 0;
+    width: 100%;
     padding-top: 15px;
     padding-bottom: 1px;
     background: linear-gradient(to bottom, $navBackgroundColor, red);
-    
+
     .innerNav {
         height: $navHeight;
         background: $innerNavBackgroundColor;
         color: $navTextColor;
+        display: flex;
 
-        @include flexCenter(center);
+        .nav1 {
+            display: flex;
 
-        h1{
-            margin-left: 5vw;
-            margin-right: 5vw;
-        }
-
-        .loginButton {
-            margin-left: 0.5vw;
-            margin-right: 0.5vw;
-            text-decoration: none;
-            display: block;
-            color: white;
-            font-size: 15px;
-            padding-top: $searchCalendarPadding;
-            padding-bottom: $searchCalendarPadding;
-            padding-right: $searchCalendarPadding * 2;
-            padding-left: $searchCalendarPadding * 2;
-            background: $navBackgroundColor; // linear-gradient(to top, red, $navBackgroundColor);
-            border-radius: $inputBorderRadius;
-            font-weight: bold;
-            &:hover {
-                text-decoration: underline;
+            img {
+                height: 8.5vh;
             }
         }
-
-        .navServiceProviderLink {
-            text-decoration: none;
-            color: white;
-            &:hover {
-                text-decoration: underline;
+        
+        .nav2 {
+            display: flex;
+            justify-content: flex-end;
+            .loginButton {
+                margin-left: 0.5vw;
+                margin-right: 0.5vw;
+                text-decoration: none;
+                display: block;
+                color: white;
+                font-size: 15px;
+                padding-top: $searchCalendarPadding;
+                padding-bottom: $searchCalendarPadding;
+                padding-right: $searchCalendarPadding * 2;
+                padding-left: $searchCalendarPadding * 2;
+                background: $navBackgroundColor; // linear-gradient(to top, red, $navBackgroundColor);
+                border-radius: $inputBorderRadius;
+                font-weight: bold;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
+    
+            .navServiceProviderLink {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }        
         }
-
-        img {
-            height: 8.5vh;
-        }
-    }
-
-    .cartIconContainer {
-        color: white;
-        position: absolute;
-        top: 0;
     }
 }
 
