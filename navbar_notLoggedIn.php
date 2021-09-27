@@ -40,7 +40,7 @@
         </div>
         <div class="nav2">
             <a href="customerlogin.php" class="loginButton">Login / Signup</a>
-            <a href="#serviceProvider" class="navServiceProviderLink">Be a  Service Provider</a>
+            <a href="admin/login2.php" class="navServiceProviderLink">Be a  Service Provider</a>
         </div>
     </div>
 </nav>
