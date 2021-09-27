@@ -1,8 +1,9 @@
 <!doctype html>
 <html>
 <head>
-    <title>Assist</title>
+    
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Icon_Search.png">
 
     <link href="../css/navbar.css" rel="stylesheet">
 </head>
@@ -12,7 +13,7 @@
 <!--Navigation Bar-->
 <nav>
     <div class="innerNav">
-        <img src="./images/Assist2_NavBar.png" class="navbarBrand">
+        <a href="index.php"><img src="./images/Assist2_NavBar.png" class="navbarBrand"></a>
         <div class="searchServiceContainer">
             <form class="searchService" action="action_page.php">
                 <input type="text" placeholder="Search services..." id="searchService">
