@@ -4,6 +4,7 @@ footer {
   background: linear-gradient(to bottom, red, #fb6f17);
   width: 100%;
   margin-top: auto;
+  bottom: 0;
 }
 
 footer .footerServices {

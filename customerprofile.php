@@ -1,7 +1,16 @@
 <?php
 
     require('server.php');
+    //require('session.php');
 
+    if (isset($_SESSION['userAccess']) === 'Customer')
+    {
+        $message = "Welcome" . $_SESSION['email_address'];
+    }
+
+    $status = $_SESSION['status'];
+
+    echo "<script> console.log('Status: $status'); </script>";
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +28,14 @@
 </head>
 <body>
     
+    <?php
 
-    Welcome to Assist!
+        $message
 
+    ?>
 
+    Welcome to Assist! Customer Dashboard
+
+    <?php require('footer.php'); ?>
 </body>
 </html>

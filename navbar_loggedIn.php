@@ -3,7 +3,8 @@
 <head>
     <title>Assist</title>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/navbar.css">
+
+    <link href="../css/navbar.css" rel="stylesheet">
 </head>
 
 <body>
@@ -32,7 +33,7 @@
         <div class="cartIconContainer">
             <form action="#" class="font-size-14 font-rale">
                 <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
-       0            <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
+       0           <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
                     <span class="px-3 py-2 rounded-pill text-dark bg-light"></span>
                 </a>
             </form>
