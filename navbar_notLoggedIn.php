@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="nav2">
-            <a href="#loginSignup" class="loginButton">Login / Signup</a>
+            <a href="customerlogin.php" class="loginButton">Login / Signup</a>
             <a href="#serviceProvider" class="navServiceProviderLink">Be a  Service Provider</a>
         </div>
     </div>

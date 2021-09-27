@@ -1,6 +1,7 @@
 <?php
 
     require('server.php');
+    
 
     session_start();
 
@@ -11,7 +12,7 @@
 
     if ($_SESSION['status'] == 'valid')
     {
-        header('location: index.php');
+        header('location: customerprofile.php');
     }
 
     $status = $_SESSION['status'];
@@ -19,7 +20,7 @@
     echo "<script> console.log('$status'); </script>";
 
 
-    if(isset($_POST['submitcustomer']))
+    if(isset($_POST['submitcustomerlogin']))
     {
         $email_address = trim($_POST['email_address']);
         $password = trim($_POST['password']);
@@ -105,7 +106,7 @@
             </div>
             <br>
             <div class="col-6 mx-auto">
-                <button type="submit" name="submitcustomer" class="btn btn-primary btn-md">Sign In</button>
+                <button type="submit" name="submitcustomerlogin" class="btn btn-primary btn-md">Sign In</button>
             </div>
         </form>
     </main>

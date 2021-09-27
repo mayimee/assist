@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Registration</title>
 
-    <?php require('pages/css.php'); ?>
+    <?php require('css.php'); ?>
 
 </head>
 <body>
@@ -54,8 +54,8 @@
                         <label for="confirmPassword" class="form-label">Confirm Password</label>
                         <input type="password" name="confirm_password" id="confirmPassword" placeholder="Confirm Password" class="form-control">
                     </div>
-                    <div class="text-center">
-                        <input type="checkbox" name="agree" id="agree"> I accept the Terms and Conditions.
+                    <div class="col-md-12 text-center">
+                        <input type="checkbox" name="agree" id="agree"> This is to certify that all information above are true and valid. I have also read the <a href="termscondition.html" target="_blank">Terms & Conditions</a>.
                     </div>
                     <br>
                     <div class="col-md-3 d-grid mx-auto gap-2 mt-5 mb-3">
