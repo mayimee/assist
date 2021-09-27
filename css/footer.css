@@ -4,6 +4,7 @@ footer {
   background: linear-gradient(to bottom, red, #fb6f17);
   width: 100%;
   margin-top: auto;
+  bottom: 0;
 }
 
 footer .footerServices {
@@ -17,7 +18,7 @@ footer .footerServices {
       -ms-flex-align: start;
           align-items: flex-start;
   background: #FFE8D6;
-  padding: 1vh;
+  padding: 1.5vh;
 }
 
 footer .footerServices .footerServicesBullets {
@@ -55,6 +56,7 @@ footer .footerBottom {
       -ms-flex-align: start;
           align-items: flex-start;
   background: #58595b;
+  padding-top: 1.5vh;
 }
 
 footer .footerBottom .footerBottomBullets {

@@ -33,7 +33,7 @@ nav {
     width: 100%;
     padding-top: 15px;
     padding-bottom: 1px;
-    background: linear-gradient(to bottom, $navBackgroundColor, red);
+    background: linear-gradient(to bottom, $navBackgroundColor, white);
 
     .innerNav {
         height: $navHeight;
@@ -41,7 +41,7 @@ nav {
         color: $navTextColor;
 
         .nav1 {
-            @include flex(center);
+            @include flex(center, flex-start);
     
             img {
                 height: 8.5vh;
@@ -49,7 +49,7 @@ nav {
         }
         
         .nav2 {
-            @include flex(flex-end);
+            @include flex(flex-end, flex-start);
           
             .loginButton {
                 margin-left: 0.5vw;
@@ -84,7 +84,7 @@ nav {
 
 // Navbar search service field
 .searchServiceContainer {
-    @include flex(center);
+    @include flex(center, flex-start);
     margin-left: 1.25vw;
     margin-right: $navInputMargin;
 
@@ -113,7 +113,7 @@ nav {
 
 // Navbar search address field
 .searchAddressContainer {
-    @include flex(center);
+    @include flex(center, flex-start);
     margin-right: $navInputMargin;
     margin-left: $navInputMargin;
 

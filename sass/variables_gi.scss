@@ -36,10 +36,10 @@ $navInputMargin: 0.25vw;
 }
 
 // Positions
-@mixin flexCenter($itemAlignment) {
+@mixin flex($justifyContent, $alignItems) {
     display: flex;
-    justify-content: center;
-    align-items: $itemAlignment;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
 }
 
 @mixin pageSpacer {

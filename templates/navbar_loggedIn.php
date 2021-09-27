@@ -3,7 +3,7 @@
 <head>
     <title>Assist</title>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".//css/index.css">
+    <link rel="stylesheet" href="../css/navbar.css">
 </head>
 
 <body>
@@ -29,6 +29,8 @@
                     <button type="submit"><span class="fa fa-search"></span></button>
                 </form>
             </div>
+        </div>
+        <div class="nav2">
             <div class="cartIconContainer">
                 <form action="#" class="font-size-14 font-rale">
                     <a href="cart.php" class="py-2 rounded-pill color-primary-bg">0
@@ -37,10 +39,6 @@
                     </a>
                 </form>
             </div>
-        </div>
-        <div class="nav2">
-            <a href="#loginSignup" class="loginButton">Login / Signup</a>
-            <a href="#serviceProvider" class="navServiceProviderLink">Be a  Service Provider</a>
         </div>
     </div>
 </nav>

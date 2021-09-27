@@ -1,17 +1,23 @@
 nav {
   position: fixed;
   top: 0;
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 1px;
   background: -webkit-gradient(linear, left top, left bottom, from(#fb6f17), to(red));
   background: linear-gradient(to bottom, #fb6f17, red);
-  width: 100%;
 }
 
 nav .innerNav {
   height: 10vh;
   background: #58595b;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .innerNav .nav1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,12 +29,23 @@ nav .innerNav {
           align-items: center;
 }
 
-nav .innerNav h1 {
-  margin-left: 5vw;
-  margin-right: 5vw;
+nav .innerNav .nav1 img {
+  height: 8.5vh;
 }
 
-nav .innerNav .loginButton {
+nav .innerNav .nav2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .innerNav .nav2 .loginButton {
   margin-left: 0.5vw;
   margin-right: 0.5vw;
   text-decoration: none;
@@ -44,27 +61,17 @@ nav .innerNav .loginButton {
   font-weight: bold;
 }
 
-nav .innerNav .loginButton:hover {
+nav .innerNav .nav2 .loginButton:hover {
   text-decoration: underline;
 }
 
-nav .innerNav .navServiceProviderLink {
+nav .innerNav .nav2 .navServiceProviderLink {
   text-decoration: none;
   color: white;
 }
 
-nav .innerNav .navServiceProviderLink:hover {
+nav .innerNav .nav2 .navServiceProviderLink:hover {
   text-decoration: underline;
-}
-
-nav .innerNav img {
-  height: 8.5vh;
-}
-
-nav .cartIconContainer {
-  color: white;
-  position: absolute;
-  top: 0;
 }
 
 .searchServiceContainer {
@@ -176,18 +183,19 @@ footer {
   background: linear-gradient(to bottom, red, #fb6f17);
   width: 100%;
   margin-top: auto;
+  bottom: 0;
 }
 
 footer .footerServices {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #FFE8D6;
   padding: 1vh;
 }
@@ -220,12 +228,12 @@ footer .footerBottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #58595b;
 }
 
