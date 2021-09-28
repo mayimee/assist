@@ -1,3 +1,9 @@
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .navBrand {
   height: 8.5vh;
 }

@@ -30,7 +30,7 @@ $(document).ready(function(){
         layoutMode : 'fitRows'
     });
 
-    // filter items on button click
+    // filter services on button click
     $(".button-group").on("click", "button", function(){
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({ filter: filterValue});
@@ -84,9 +84,9 @@ $(document).ready(function(){
         let $price = $(`.product_price[data-id='${$(this).data("id")}']`);
 
         // change product price using ajax call
-        $.ajax({url: "template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
+        $.ajax({url: "template/ajax.php", type : 'post', data : { serviceid : $(this).data("id")}, success: function(result){
                 let obj = JSON.parse(result);
-                let item_price = obj[0]['item_price'];
+                let service_price = obj[0]['service_price'];
 
                 if($input.val() >= 1 && $input.val() <= 9){
                     $input.val(function(i, oldval){
@@ -94,10 +94,10 @@ $(document).ready(function(){
                     });
 
                     // increase price of the product
-                    $price.text(parseInt(item_price * $input.val()).toFixed(2));
+                    $price.text(parseInt(service_price * $input.val()).toFixed(2));
 
                     // set subtotal price
-                    let subtotal = parseInt($deal_price.text()) + parseInt(item_price);
+                    let subtotal = parseInt($deal_price.text()) + parseInt(service_price);
                     $deal_price.text(subtotal.toFixed(2));
                 }
 
@@ -111,9 +111,9 @@ $(document).ready(function(){
         let $price = $(`.product_price[data-id='${$(this).data("id")}']`);
 
         // change product price using ajax call
-        $.ajax({url: "template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
+        $.ajax({url: "template/ajax.php", type : 'post', data : { serviceid : $(this).data("id")}, success: function(result){
                 let obj = JSON.parse(result);
-                let item_price = obj[0]['item_price'];
+                let service_price = obj[0]['service_price'];
 
                 if($input.val() > 1 && $input.val() <= 10){
                     $input.val(function(i, oldval){
@@ -122,10 +122,10 @@ $(document).ready(function(){
 
 
                     // increase price of the product
-                    $price.text(parseInt(item_price * $input.val()).toFixed(2));
+                    $price.text(parseInt(service_price * $input.val()).toFixed(2));
 
                     // set subtotal price
-                    let subtotal = parseInt($deal_price.text()) - parseInt(item_price);
+                    let subtotal = parseInt($deal_price.text()) - parseInt(service_price);
                     $deal_price.text(subtotal.toFixed(2));
                 }
 

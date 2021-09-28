@@ -31,12 +31,12 @@ class Cart
         }
     }
 
-    // to get user_id and item_id and insert into cart table
-    public  function addToCart($userid, $itemid){
-        if (isset($userid) && isset($itemid)){
+    // to get user_id and service_id and insert into cart table
+    public  function addToCart($userid, $serviceid){
+        if (isset($userid) && isset($serviceid)){
             $params = array(
                 "user_id" => $userid,
-                "item_id" => $itemid
+                "service_id" => $serviceid
             );
 
             // insert data into cart
@@ -48,10 +48,10 @@ class Cart
         }
     }
 
-    // delete cart item using cart item id
-    public function deleteCart($item_id = null, $table = 'cart'){
-        if($item_id != null){
-            $result = $this->db->con->query("DELETE FROM {$table} WHERE item_id={$item_id}");
+    // delete cart service using cart service id
+    public function deleteCart($service_id = null, $table = 'cart'){
+        if($service_id != null){
+            $result = $this->db->con->query("DELETE FROM {$table} WHERE service_id={$service_id}");
             if($result){
                 header("Location:" . $_SERVER['PHP_SELF']);
             }
@@ -63,15 +63,15 @@ class Cart
     public function getSum($arr){
         if(isset($arr)){
             $sum = 0;
-            foreach ($arr as $item){
-                $sum += floatval($item[0]);
+            foreach ($arr as $service){
+                $sum += floatval($service[0]);
             }
             return sprintf('%.2f' , $sum);
         }
     }
 
-    // get item_it of shopping cart list
-    public function getCartId($cartArray = null, $key = "item_id"){
+    // get service_it of shopping cart list
+    public function getCartId($cartArray = null, $key = "service_id"){
         if ($cartArray != null){
             $cart_id = array_map(function ($value) use($key){
                 return $value[$key];
@@ -81,10 +81,10 @@ class Cart
     }
 
     // Save for later
-    public function saveForLater($item_id = null, $saveTable = "wishlist", $fromTable = "cart"){
-        if ($item_id != null){
-            $query = "INSERT INTO {$saveTable} SELECT * FROM {$fromTable} WHERE item_id={$item_id};";
-            $query .= "DELETE FROM {$fromTable} WHERE item_id={$item_id};";
+    public function saveForLater($service_id = null, $saveTable = "wishlist", $fromTable = "cart"){
+        if ($service_id != null){
+            $query = "INSERT INTO {$saveTable} SELECT * FROM {$fromTable} WHERE service_id={$service_id};";
+            $query .= "DELETE FROM {$fromTable} WHERE service_id={$service_id};";
 
             // execute multiple query
             $result = $this->db->con->multi_query($query);
