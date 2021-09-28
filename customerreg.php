@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<?php require('navbar_notLoggedIn.php'); ?>
+<?php require('header.php'); ?>
 
     <main class="p-5 mt-5">
         <div class="container">

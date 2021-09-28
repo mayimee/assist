@@ -36,6 +36,6 @@
 
     Welcome to Assist! Customer Dashboard
 
-    <?php require('footer.php'); ?>
+    <?php require('header.php'); ?>
 </body>
 </html>

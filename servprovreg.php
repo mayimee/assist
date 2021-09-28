@@ -45,7 +45,7 @@
 </head>
 <body>
 
-<?php require('navbar_notLoggedIn.php'); ?>
+<?php require('header.php'); ?>
 
     <main class="mt-5">
         <div class="container mt-5">

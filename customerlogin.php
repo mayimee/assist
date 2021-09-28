@@ -84,7 +84,7 @@
 </head>
 <body class="text-center">
 
-<?php require('navbar_notLoggedIn.php'); ?>
+<?php require('header.php'); ?>
 
     <main class="my-5">
         <br>
