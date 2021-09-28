@@ -45,6 +45,19 @@
             }
         }
 
+        if(empty($_POST["email_address"]))
+                {
+                    $email_addressErr = "Email Address is required.";
+                }
+                else 
+                {
+                    $email_address = checkInput($_POST["email_address"]);
+                    if (!filter_var($email_address, FILTER_VALIDATE_EMAIL))
+                    {
+                        $email_addressErr="Please provide a valid email address.";
+                    }
+                }
+
         function checkInput($data)
         {
                     

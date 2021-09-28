@@ -44,9 +44,9 @@
 
 <?php require('header.php'); ?>
 
-    <main class="my-5 p-5">
-        <div class="container my-5">
-            <form action="servprovreg.php" method="POST" enctype="multipart/form-data" class="form-control">
+    <main class="my-5 py-5">
+        <div class="container">
+            <form action="servprovreg.php" method="POST" enctype="multipart/form-data">
                 <div>
                     <h3 class="text-center">Business Registration</h3>
                 </div>
@@ -101,6 +101,8 @@
                     <div class="col-md-12 text-center">
                         <input type="checkbox" name="agree" id="agree"> This is to certify that all information above are true and valid. I have also read the <a href="termscondition.html" target="_blank">Terms & Conditions</a>.
                     </div>
+                    <br>
+                    <br>
                     <div class="col-md-12 text-center">
                         <button type="submit" name="submitbusiness" class="btn btn-primary">Submit</button>
                     </div>

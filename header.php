@@ -17,7 +17,7 @@
 
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="css/header.css">
 
     <?php
     // require functions.php file
