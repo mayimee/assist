@@ -35,21 +35,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
+    <?php require('css.php'); ?>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
-
-    <?php require('./css.php'); ?>
 </head>
 <body>
 
 <?php require('header.php'); ?>
 
-    <main class="mt-5">
-        <div class="container mt-5">
-            <form action="servprovreg.php" method="POST" enctype="multipart/form-data" class="form-control">
+    <main class="my-5 py-5">
+        <div class="container">
+            <form action="servprovreg.php" method="POST" enctype="multipart/form-data">
                 <div>
                     <h3 class="text-center">Business Registration</h3>
                 </div>
@@ -84,7 +81,7 @@
                         <input type="text" name="rep_last_name" id="rep_last_name" class="form-control" placeholder="Last Name">
                     </div>
                     <div class="col-md-12 mb-3">
-                        <label class="form-label">Business Logo/Image</label>
+                        <label class="form-label">Business Logo</label>
                         <div class="input-group mb-3">
                             <input type="file" name="business_logo" class="form-control" id="business_logo">
                           </div>
@@ -104,6 +101,8 @@
                     <div class="col-md-12 text-center">
                         <input type="checkbox" name="agree" id="agree"> This is to certify that all information above are true and valid. I have also read the <a href="termscondition.html" target="_blank">Terms & Conditions</a>.
                     </div>
+                    <br>
+                    <br>
                     <div class="col-md-12 text-center">
                         <button type="submit" name="submitbusiness" class="btn btn-primary">Submit</button>
                     </div>
