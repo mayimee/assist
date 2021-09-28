@@ -6,7 +6,7 @@ class DBController
     // Database Connection Properties
     protected $host = 'localhost';
     protected $user = 'root';
-    protected $password = 'GraceBetanzor';
+    protected $password = 'password';
     protected $database = "assist_db";
 
     // connection property
