@@ -49,7 +49,7 @@
 
     <main class="mt-5">
         <div class="container mt-5">
-            <form action="servprovform.php" method="POST" enctype="multipart/form-data" class="form-control">
+            <form action="servprovreg.php" method="POST" enctype="multipart/form-data" class="form-control">
                 <div>
                     <h3 class="text-center">Business Registration</h3>
                 </div>

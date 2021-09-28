@@ -18,7 +18,7 @@
 
             $sqlInsertCustomer = mysqli_query($connect, $queryInsertCustomer) OR trigger_error('Query failed SQL: '. $queryInsertCustomer);
 
-            echo "<script> window.location.href = 'customerLogin.html'; </script>";
+            echo "<script> window.location.href = 'customerLogin.php'; </script>";
         }
 
 ?>
