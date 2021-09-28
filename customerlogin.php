@@ -86,7 +86,7 @@
 
 <?php require('header.php'); ?>
 
-    <main class="my-5">
+    <main class="my-5 p-5">
         <br>
         <h2 class="align-center">
             Customer Login
