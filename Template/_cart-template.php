@@ -31,7 +31,7 @@
                     </div>
                     <div class="col-sm-8">
                         <h5 class="font-baloo font-size-20"><?php echo $service['service_name'] ?? "Unknown"; ?></h5>
-                        <small>by <?php echo $service['service_brand'] ?? "Brand"; ?></small>
+                        <small>by <?php echo $service['service_type'] ?? "Category"; ?></small>
                         <!-- product rating -->
                         <div class="d-flex">
                             <div class="rating text-warning font-size-12">
