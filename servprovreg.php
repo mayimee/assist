@@ -99,7 +99,7 @@
                         <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" class="form-control">
                     </div>
                     <div class="col-md-12 text-center">
-                        <input type="checkbox" name="agree" id="agree"> This is to certify that all information above are true and valid. I have also read the <a href="termscondition.html" target="_blank">Terms & Conditions</a>.
+                        <input type="checkbox" name="agree" id="agree" required> This is to certify that all information above are true and valid. I have also read the <a href="termscondition.html" target="_blank">Terms & Conditions</a>.
                     </div>
                     <br>
                     <br>
