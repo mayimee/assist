@@ -82,13 +82,13 @@
     <?php require('css.php'); ?>
 
 </head>
-<body class="text-center">
+<body>
 
 <?php require('header.php'); ?>
 
-    <main class="my-5">
+    <main class="my-5 p-5">
         <br>
-        <h2 class="align-center">
+        <h2 class="text-center">
             Customer Login
         </h2>
         <form action="customerlogin.php" method="POST" class="formSignin my-5">
@@ -109,7 +109,7 @@
 
     <div>
 
-        <p>New User? Click <a href="customerreg.php">here</a> to register.</p>
+        <p class="text-center">New User? Click <a href="customerreg.php">here</a> to register.</p>
 
     </div>
 

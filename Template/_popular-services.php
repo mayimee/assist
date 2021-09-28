@@ -1,26 +1,26 @@
-<!-- Top Sale -->
+<!-- Popular Services -->
 <?php
 
     shuffle($product_shuffle);
 
     // request method post
     if($_SERVER['REQUEST_METHOD'] == "POST"){
-        if (isset($_POST['top_sale_submit'])){
+        if (isset($_POST['popular_services_submit'])){
             // call method addToCart
             $Cart->addToCart($_POST['user_id'], $_POST['service_id']);
         }
     }
 ?>
-<section id="top-sale">
-    <div class="container py-4">
+<section id="popular-services">
+    <div class="container py-5">
         <h4 class="font-rubik font-size-20">Popular Services</h4>
         <hr>
         <!-- owl carousel -->
         <div class="owl-carousel owl-theme">
             <?php foreach ($product_shuffle as $service) { ?>
-            <div class="item pb-3" style="border: 1px solid #E4E5E8; margin-left: 8px; margin-right: 8px">
+            <div class="item py-2">
                 <div class="product font-rale">
-                    <a href="<?php printf('%s?service_id=%s', 'product.php',  $service['service_id']); ?>"><img src="<?php echo $service['service_image'] ?? "./assets/products/1.png"; ?>" style="height: 150px" class="img-fluid"></a>
+                    <a href="<?php printf('%s?service_id=%s', 'product.php',  $service['service_id']); ?>"><img src="<?php echo $service['service_image'] ?? "./assets/products/1.png"; ?>" alt="product1" class="img-fluid"></a>
                     <div class="text-center">
                         <h6><?php echo  $service['service_name'] ?? "Unknown";  ?></h6>
                         <div class="rating text-warning font-size-12">
@@ -40,7 +40,7 @@
                             if (in_array($service['service_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
                                 echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
                             }else{
-                                echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-12">Add to Cart</button>';
+                                echo '<button type="submit" name="popular_services_submit" class="btn btn-warning font-size-12">Add to Cart</button>';
                             }
                             ?>
 
@@ -53,4 +53,4 @@
         <!-- !owl carousel -->
     </div>
 </section>
-<!-- !Top Sale -->
+<!-- !Popular Services -->

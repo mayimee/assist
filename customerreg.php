@@ -13,12 +13,12 @@
 
 <?php require('header.php'); ?>
 
-    <main class="p-5 mt-5">
-        <div class="container">
+    <main class="p-5 mt-5 container">
+        <div>
             <br>
             <br>
-            <form action="createaccount.php" method="POST" class="form-control">
-                <h3 class="text-center">Customer Registration</h3>
+            <h3 class="text-center">Customer Registration</h3>
+            <form action="createaccount.php" method="POST"> 
                 <div class="row">
                     <div class="col-sm-4 mt-3 mb-3">
                         <label for="first_name" class="form-label">First Name</label>
