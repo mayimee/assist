@@ -12,7 +12,7 @@ class Product
     }
 
     // fetch product data using getData Method
-    public function getData($table = 'service'){
+    public function getData(){
         $result = $this->db->con->query("SELECT * FROM service");
        
 
@@ -28,7 +28,7 @@ class Product
     }
 
     // get product using service id
-    public function getProduct($service_id = null, $table= 'service'){
+    public function getProduct($service_id = null){
         if (isset($service_id)){
             $result = $this->db->con->query("SELECT * FROM service WHERE service_id={$service_id}");
 

@@ -84,7 +84,9 @@
 </head>
 <body>
 
-<?php require('header.php'); ?>
+    <?php
+        include ('header.php');
+    ?>
 
     <main class="my-5 p-5">
         <br>
