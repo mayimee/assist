@@ -114,7 +114,7 @@ echo "<script>window.location.href ='thank-you.php'</script>";
 							 	<option value="9 a.m">9 a.m</option>
 							 	<option value="10 a.m">10 a.m</option>
 							 	<option value="11 a.m">11 a.m</option>
-							 	<option value="12 p.m">12 a.m</option>
+							 	<option value="12 p.m">12 p.m</option>
 							 	<option value="1 p.m">1 p.m</option>
 							 	<option value="2 p.m">2 p.m</option>
 							 	<option value="3 p.m">3 p.m</option>
@@ -174,7 +174,7 @@ foreach($result2 as $row)
 				 </div>
 				 <div class="clearfix"></div>
 			 </div>
-		 </div>
+		 </div><br>
 		<?php include_once('footer.php');?>
 	 </div>
 </div>

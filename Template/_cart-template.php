@@ -29,9 +29,23 @@
                     <div class="col-sm-2">
                         <img src="<?php echo $item['item_image'] ?? "./assets/products/1.png" ?>" style="height: 120px;" alt="cart1" class="img-fluid">
                     </div>
+                    
                     <div class="col-sm-8">
                         <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
                         <small>by <?php echo $item['item_brand'] ?? "Brand"; ?></small>
+                        
+                        <form method="post">
+                                <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
+                                <button type="submit" name="wishlist-submit" class="btn font-baloo text-danger">Save for Later</button>
+
+                        <ul>
+						
+							<li class="button yellow"><a href="book-services2.php?bookid=1">Book Appointment</a></li>
+						</ul>
+                        </form>
+
+                        
+
                         <!-- product rating -->
                         <div class="d-flex">
                             <div class="rating text-warning font-size-12">

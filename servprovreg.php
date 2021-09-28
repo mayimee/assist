@@ -23,7 +23,7 @@
             $queryInsertBusiness = "INSERT INTO service_provider (business_name, type_business, contact_number, office_address, rep_first_name, rep_last_name, email_address, password, business_image) VALUES ('$business_name', '$type_business', '$contact_number', '$address', '$rep_first_name', '$rep_last_name', '$email_address', '$hash_password', '$business_logo');";
 
             $sqlInsertBusiness = mysqli_query($connect, $queryInsertBusiness) OR trigger_error('Query failed: ' . $queryInsertBusiness);
-
+      
             echo "<script> window.location.href = 'servprovlogin.php' ;</script>";
         }
 
@@ -49,7 +49,7 @@
 
     <main class="mt-5">
         <div class="container mt-5">
-            <form action="servprovform.php" method="POST" enctype="multipart/form-data" class="form-control">
+            <form action="servprovreg.php" method="POST" enctype="multipart/form-data" class="form-control">
                 <div>
                     <h3 class="text-center">Business Registration</h3>
                 </div>
