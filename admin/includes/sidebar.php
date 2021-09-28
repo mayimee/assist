@@ -17,7 +17,7 @@ if (strlen($_SESSION['odmsaid']==0)) {
                         <!-- Side Header -->
                         <div class="content-header content-header-fullrow px-15">
                             <!-- Mini Mode -->
-                            <div class="content-header-section sidebar-mini-visible-b">
+                            <div class="content-header-section sidebar-mini-visible-b txtColorTheme">
                                 <!-- Logo -->
                                 <span class="content-header-item font-w700 font-size-xl float-left animated fadeIn">
                                     <span class="text-dual-primary-dark">c</span><span class="text-primary">b</span>
@@ -39,7 +39,7 @@ if (strlen($_SESSION['odmsaid']==0)) {
                                 <div class="content-header-item">
                                     <a class="link-effect font-w700" href="dashboard.php">
                                         <i class="si si-fire text-primary"></i>
-                                        <span class="font-size-xl text-dual-primary-dark">ASSIST</span><span class="font-size-xl text-primary"> Admin</span>
+                                        <span class="font-size-xl text-dual-primary-dark">ASSIST</span><span class="font-size-xl txtColorTheme"> Admin</span>
                                     </a>
                                 </div>
                                 <!-- END Logo -->

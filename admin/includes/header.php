@@ -28,17 +28,18 @@ if (strlen($_SESSION['odmsaid']==0)) {
                         <!-- User Dropdown -->
                         <div class="btn-group" role="group">
                             <?php
-$aid=$_SESSION['odmsaid'];
-$sql="SELECT AdminName from  tbladmin where ID=:aid";
-$query = $dbh -> prepare($sql);
-$query->bindParam(':aid',$aid,PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?>
+                                $aid=$_SESSION['odmsaid'];
+                                $sql="SELECT AdminName from  tbladmin where ID=:aid";
+                                $query = $dbh -> prepare($sql);
+                                $query->bindParam(':aid',$aid,PDO::PARAM_STR);
+                                $query->execute();
+                                $results=$query->fetchAll(PDO::FETCH_OBJ);
+                                $cnt=1;
+                                if($query->rowCount() > 0)
+                                {
+                                foreach($results as $row)
+                                {               
+                            ?>
                             <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <?php  echo $row->AdminName;?><i class="fa fa-angle-down ml-5"></i>
                             </button>

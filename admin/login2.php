@@ -45,6 +45,7 @@ echo "<script>alert('Invalid Details');</script>";
     <head>       
         <title>Assist Admin - Login Page</title>
         <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+        <link rel="stylesheet" href="assets/css/colors.css">
     </head>
     <body>
       
@@ -69,8 +70,8 @@ echo "<script>alert('Invalid Details');</script>";
                                 <!-- Header -->
                                 <div class="px-30 py-10">
                                     <a class="link-effect font-w700" href="login2.php">
-                                        <i class="si si-fire"></i>
-                                        <span class="font-size-xl">ASSIST</span>
+                                        <i class="si si-fire txtColorTheme"></i>
+                                        <span class="font-size-xl txtColorTheme">ASSIST</span>
                                     </a>
                                     <h1 class="h3 font-w700 mt-30 mb-10">Welcome to Your Dashboard</h1>
                                     <h2 class="h5 font-w400 text-muted mb-0">Please sign in</h2>
@@ -100,7 +101,7 @@ echo "<script>alert('Invalid Details');</script>";
             </div>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-sm btn-hero btn-alt-primary" name="login">
+                                        <button type="submit" class="btn btn-sm btn-hero btnColorTheme" name="login">
                                             <i class="si si-login mr-10"></i> Sign In
                                         </button>
                                         <div class="mt-30">
@@ -108,7 +109,7 @@ echo "<script>alert('Invalid Details');</script>";
                                             <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="forgot-password.php">
                                                 <i class="fa fa-warning mr-5"></i> Forgot Password
                                             </a>
-                                            <a href="../index.php"><strong>Back to Home</strong></a>
+                                            <a href="../index.php"><strong class="txtColorTheme">Back to Home</strong></a>
                                         </div>
                                     </div>
                                 </form>

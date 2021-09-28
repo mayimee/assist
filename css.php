@@ -7,7 +7,7 @@
 
     <link href="css/style_Marielle.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles_Gi.css">
-    <link rel="icon" href="images/Icon_Search.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/Icon_Search.png" type="image/x-icon">
     <link rel="stylesheet" href="css/navbar.css">
 
 </head>

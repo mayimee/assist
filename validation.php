@@ -1,5 +1,5 @@
 <?php
 
-    $first_name = $last_name = $email_address = $password = "";
+    $first_name = $middle_name = $last_name = $contact_number = $birthday = $email_address = $password = $confirm_password = "";
 
 ?>

@@ -32,7 +32,7 @@
     <div class="strip d-flex justify-content-end px-4 py-1" style="background: #fb6f17">       
         <div class="font-rale font-size-14">
             <a href="customerlogin.php" class="px-3 border-right border-left text-dark">Login</a>
-            <a href="servprovlogin.php" class="px-3 text-dark">Be a Service Provider</a>
+            <a href="admin/login2.php" class="px-3 text-dark">Be a Service Provider</a>
         </div>
     </div>
 
