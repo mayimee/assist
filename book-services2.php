@@ -35,7 +35,7 @@ $query->bindParam(':addinfo',$addinfo,PDO::PARAM_STR);
    $LastInsertId=$dbh->lastInsertId();
    if ($LastInsertId>0) {
     echo '<script>alert("Your Booking Request Has Been Sent. We Will Contact You Soon")</script>';
-echo "<script>window.location.href ='thank-you.php'</script>";
+echo "<script>window.location.href ='cart.php'</script>";
   }
   else
     {
@@ -45,6 +45,7 @@ echo "<script>window.location.href ='thank-you.php'</script>";
 }
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -75,8 +76,8 @@ echo "<script>window.location.href ='thank-you.php'</script>";
 		</script>
 
 </head>
-<body>
-<?php include_once('includes/header.php');?>
+<body></body>
+<?php include('header.php');?>
 <div class="contact content">
 	 <div class="container"> 		 
 		 <ol class="breadcrumb">
@@ -169,7 +170,7 @@ foreach($result2 as $row)
 				 </div>
 				 <div class="col-md-6 contact-right">
 					 	<div class="contact-map">
-						<img src="images/431429.jpg" class="img-responsive" height="900" width="500" alt=""/>
+						<img src="assets/images/431429.jpg" class="img-responsive" height="900" width="500" alt=""/>
 						</div>
 				 </div>
 				 <div class="clearfix"></div>
