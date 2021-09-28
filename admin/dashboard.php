@@ -23,12 +23,12 @@
                             <a class="block text-center" href="new-booking.php">
                                 <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left bg-gd-sea">
                                     <?php 
-$sql ="SELECT ID from tblbooking where Status is null ";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$totalnewbooking=$query->rowCount();
-?>
+                                        $sql ="SELECT ID from tblbooking where Status is null ";
+                                        $query = $dbh -> prepare($sql);
+                                        $query->execute();
+                                        $results=$query->fetchAll(PDO::FETCH_OBJ);
+                                        $totalnewbooking=$query->rowCount();
+                                    ?>
                                     <div class="ribbon-box"><?php echo htmlentities($totalnewbooking);?></div>
                                     <p class="mt-5">
                                         <i class="si si-pencil fa-3x text-white-op"></i>
@@ -41,12 +41,12 @@ $totalnewbooking=$query->rowCount();
                             <a class="block text-center" href="approved-booking.php">
                                 <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left bg-gd-sea">
                                    <?php 
-$sql ="SELECT ID from tblbooking where Status='Approved' ";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$totalappbooking=$query->rowCount();
-?> 
+                                        $sql ="SELECT ID from tblbooking where Status='Approved' ";
+                                        $query = $dbh -> prepare($sql);
+                                        $query->execute();
+                                        $results=$query->fetchAll(PDO::FETCH_OBJ);
+                                        $totalappbooking=$query->rowCount();
+                                    ?> 
                                     <div class="ribbon-box"><?php echo htmlentities($totalappbooking);?></div>
                                     <p class="mt-5">
                                         <i class="si si-target fa-3x text-white-op"></i>
