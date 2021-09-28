@@ -4,7 +4,7 @@
     <div class="container-fluid w-75">
         <h5 class="font-baloo font-size-20">Wishlist</h5>
 
-        <!--  shopping cart items   -->
+        <!--  shopping cart services   -->
         <div class="row">
             <div class="col-sm-9">
                 <!-- Empty Cart -->
@@ -17,7 +17,7 @@
                 <!-- .Empty Cart -->
             </div>
         </div>
-        <!--  !shopping cart items   -->
+        <!--  !shopping cart services   -->
     </div>
 </section>
 <!-- !Shopping cart section  -->
