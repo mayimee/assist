@@ -33,7 +33,7 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
             <div class="grid-item border <?php echo $service['service_type'] ?? "Brand" ; ?>">
                 <div class="item py-2" style="width: 200px;">
                     <div class="product font-rale">
-                        <a href="<?php printf('%s?service_id=%s', 'product.php',  $service['service_id']); ?>"><img src="<?php echo $service['service_image'] ?? "./assets/products/13.png"; ?>" alt="product1" class="img-fluid"></a>
+                        <a href="<?php printf('%s?service_id=%s', 'product.php',  $service['service_id']); ?>"><img src="<?php echo $service['service_image'] ?? "./assets/products/13.png"; ?>" style="height: 150px" alt="product1" class="img-fluid"></a>
                         <div class="text-center">
                             <h6><?php echo $service['service_name'] ?? "Unknown"; ?></h6>
                             <div class="rating text-warning font-size-12">

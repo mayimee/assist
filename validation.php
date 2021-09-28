@@ -151,7 +151,6 @@
         {
             $confirm_password = checkInput($_POST["confirm_password"]);
         }       
-            
 
         function checkInput($data)
         {
