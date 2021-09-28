@@ -7,12 +7,11 @@ footer {
     width: 100%;
     margin-top: auto;
     bottom: 0;
-    padding-top: 1vh;
     
     .footerServices {
         @include flex(center, flex-start);
         background: $footerServicesBackgroundColor;
-        padding: 1vh;
+        padding: 2vh;
 
         .footerServicesBullets {
             list-style-type: none;   
@@ -34,6 +33,7 @@ footer {
     .footerBottom {
         @include flex(center, flex-start);
         background: $innerNavBackgroundColor;
+        padding-top: 1vh;
 
         .footerBottomBullets {
             list-style-type: none;

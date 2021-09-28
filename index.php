@@ -4,8 +4,9 @@
     include ('header.php');
 ?>
 
+<div class=
 <?php
-
+    
     /*  include banner area  */
         include ('Template/_banner-area.php');
     /*  include banner area  */
@@ -25,11 +26,6 @@
     /*  include new phones section  */
         include ('Template/_new-phones.php');
     /*  include new phones section  */
-
-    /*  include blog area  */
-         include ('Template/_blogs.php');
-    /*  include blog area  */
-
 ?>
 
 <?php

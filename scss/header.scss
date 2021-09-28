@@ -27,66 +27,22 @@
     }
 }
 
-nav {
+#header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 1px;
-    background: linear-gradient(to bottom, $navBackgroundColor, white);
-
-    .innerNav {
-        height: $navHeight;
-        background: $innerNavBackgroundColor;
-        color: $navTextColor;
-
-        .nav1 {
-            @include flex(center, flex-start);
-    
-            img {
-                height: 8.5vh;
-            }
-        }
-        
-        .nav2 {
-            @include flex(flex-end, flex-start);
-          
-            .loginButton {
-                margin-left: 0.5vw;
-                margin-right: 0.5vw;
-                text-decoration: none;
-                display: block;
-                color: white;
-                font-size: 15px;
-                padding-top: $searchCalendarPadding;
-                padding-bottom: $searchCalendarPadding;
-                padding-right: $searchCalendarPadding * 2;
-                padding-left: $searchCalendarPadding * 2;
-                background: $navBackgroundColor; // linear-gradient(to top, red, $navBackgroundColor);
-                border-radius: $inputBorderRadius;
-                font-weight: bold;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-    
-            .navServiceProviderLink {
-                text-decoration: none;
-                color: white;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }        
-        }
-    }
 }
 
+.navBrand {
+    height: 8.5vh;
+}
 
 // Navbar search service field
 .searchServiceContainer {
-    @include flex(center, flex-start);
-    margin-left: 1.25vw;
+    @include flex(center, center);
+    margin-left: $navInputMargin;
     margin-right: $navInputMargin;
+    height: 8.5vh;
 
     .searchService input[type=text] {
         @include search;
@@ -98,24 +54,31 @@ nav {
     }
 }
 
-#serviceDate {
-    padding: $searchCalendarPadding - 2.5px;
-    font-size: $searchCalendarTextSize;
-    border-radius: $inputBorderRadius;
-    color: #777777;// #8e8e8e; // #999; // #a9a9a9;
-    border: 1px solid grey;
-    border-radius: $inputBorderRadius;
-    background: white;
-    width: 9vw;
-    margin-right: $navInputMargin;
-    margin-left: $navInputMargin;
+.calendarContainer {
+    height: 8.5vh;
+    @include flex(center, center);
+
+    #serviceDate {
+        padding: $searchCalendarPadding - 2.5px;
+        font-size: $searchCalendarTextSize;
+        border-radius: $inputBorderRadius;
+        color: #777777;// #8e8e8e; // #999; // #a9a9a9;
+        border: 1px solid grey;
+        border-radius: $inputBorderRadius;
+        background: white;
+        width: 9vw;
+        margin-right: $navInputMargin;
+        margin-left: $navInputMargin;
+    }
 }
 
 // Navbar search address field
 .searchAddressContainer {
-    @include flex(center, flex-start);
+    @include flex(center, center);
     margin-right: $navInputMargin;
     margin-left: $navInputMargin;
+    height: 8.5vh;
+    
 
     .searchAddress input[type=text] {
         @include search;
@@ -124,12 +87,32 @@ nav {
 
     .searchAddress button {
         @include searchButton;
-    }
+    }   
+}
 
-    // Clear floats in the search bar
-    form.searchAddress::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
+// Find Button
+.findButtonContainer {
+    @include flex(center, center);
+    height: 8.5vh;
+
+    .findButton {
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
+        text-decoration: none;
+        display: block;
+        color: white;
+        font-size: 15px;
+        padding-top: $searchCalendarPadding;
+        padding-bottom: $searchCalendarPadding;
+        padding-right: $searchCalendarPadding * 4;
+        padding-left: $searchCalendarPadding * 4;
+        background: $navBackgroundColor; // linear-gradient(to top, red, $navBackgroundColor);
+        border-radius: $inputBorderRadius;
+        font-weight: bold;
+        &:hover {
+            text-decoration: none;
+            transform: scale(1.05);
+            color: white;
+        }
+    }
 }
