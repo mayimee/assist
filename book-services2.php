@@ -84,8 +84,9 @@ echo "<script>window.location.href ='cart.php'</script>";
 		  <li><a href="index.php">Home</a></li>
 		  <li class="active">Appointment Form</li>	  
 		 </ol>
-		
-		
+		 <br>
+		 <br>
+		 <br>
 			 <div class="contact-grids">
 				 <div class="col-md-6 contact-left">
 					 <p>Please fill out the form below with your details.</p>
@@ -175,7 +176,9 @@ foreach($result2 as $row)
 				 </div>
 				 <div class="clearfix"></div>
 			 </div>
-		 </div><br>
+		 </div>
+		 <br>
+		 <br>
 		<?php include_once('footer.php');?>
 	 </div>
 </div>
