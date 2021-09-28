@@ -1,74 +1,5 @@
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding-top: 15px;
-  padding-bottom: 1px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fb6f17), to(white));
-  background: linear-gradient(to bottom, #fb6f17, white);
-}
-
-nav .innerNav {
-  height: 10vh;
-  background: #58595b;
-  color: white;
-}
-
-nav .innerNav .nav1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-nav .innerNav .nav1 img {
+.navBrand {
   height: 8.5vh;
-}
-
-nav .innerNav .nav2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-nav .innerNav .nav2 .loginButton {
-  margin-left: 0.5vw;
-  margin-right: 0.5vw;
-  text-decoration: none;
-  display: block;
-  color: white;
-  font-size: 15px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-right: 14px;
-  padding-left: 14px;
-  background: #fb6f17;
-  border-radius: 3px;
-  font-weight: bold;
-}
-
-nav .innerNav .nav2 .loginButton:hover {
-  text-decoration: underline;
-}
-
-nav .innerNav .nav2 .navServiceProviderLink {
-  text-decoration: none;
-  color: white;
-}
-
-nav .innerNav .nav2 .navServiceProviderLink:hover {
-  text-decoration: underline;
 }
 
 .searchServiceContainer {
@@ -78,11 +9,12 @@ nav .innerNav .nav2 .navServiceProviderLink:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-left: 1.25vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 0.25vw;
   margin-right: 0.25vw;
+  height: 8.5vh;
 }
 
 .searchServiceContainer .searchService input[type=text] {
@@ -113,7 +45,20 @@ nav .innerNav .nav2 .navServiceProviderLink:hover {
   color: #fb6f17;
 }
 
-#serviceDate {
+.calendarContainer {
+  height: 8.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calendarContainer #serviceDate {
   padding: 4.5px;
   font-size: 14px;
   border-radius: 3px;
@@ -133,11 +78,12 @@ nav .innerNav .nav2 .navServiceProviderLink:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 0.25vw;
   margin-left: 0.25vw;
+  height: 8.5vh;
 }
 
 .searchAddressContainer .searchAddress input[type=text] {
@@ -168,8 +114,38 @@ nav .innerNav .nav2 .navServiceProviderLink:hover {
   color: #fb6f17;
 }
 
-.searchAddressContainer form.searchAddress::after {
-  content: "";
-  clear: both;
-  display: table;
+.findButtonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 8.5vh;
+}
+
+.findButtonContainer .findButton {
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-size: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 28px;
+  padding-left: 28px;
+  background: #fb6f17;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.findButtonContainer .findButton:hover {
+  text-decoration: none;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: white;
 }
