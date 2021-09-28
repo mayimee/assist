@@ -29,9 +29,16 @@
                     <div class="col-sm-2">
                         <img src="<?php echo $service['service_image'] ?? "./assets/products/1.png" ?>" style="height: 120px;" alt="cart1" class="img-fluid">
                     </div>
+                    
                     <div class="col-sm-8">
+
                         <h5 class="font-baloo font-size-20"><?php echo $service['service_name'] ?? "Unknown"; ?></h5>
                         <small>by <?php echo $service['service_type'] ?? "Category"; ?></small>
+                        
+                        <form method="get" action="book-services2.php?bookid=1">
+                            <button type="submit" class="btn btn-warning mt-3">Book Appointment</button>
+                        </form>
+
                         <!-- product rating -->
                         <div class="d-flex">
                             <div class="rating text-warning font-size-12">
@@ -87,8 +94,9 @@
                 <div class="sub-total border text-center mt-2">
                     <h6 class="font-size-12 font-rale text-success py-3"><i class="fas fa-check"></i> Your order is eligible for FREE Delivery.</h6>
                     <div class="border-top py-4">
-                        <h5 class="font-baloo font-size-20">Subtotal ( <?php echo isset($subTotal) ? count($subTotal) : 0; ?> service):&nbsp; <span class="text-danger">$<span class="text-danger" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?></span> </span> </h5>
-                        <button type="submit" class="btn btn-warning mt-3">Proceed to Buy</button>
+
+                        <h5 class="font-baloo font-size-20">Subtotal ( <?php echo isset($subTotal) ? count($subTotal) : 0; ?> item):&nbsp; <span class="text-danger">$<span class="text-danger" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?></span> </span> </h5>
+                        <button type="submit" class="btn btn-warning mt-3">Confirm Bookings</button>
                     </div>
                 </div>
             </div>
