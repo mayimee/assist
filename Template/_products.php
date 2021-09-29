@@ -4,10 +4,12 @@
     foreach ($product->getData() as $service) :
         if ($service['service_id'] == $service_id) :
 ?>
+<div class="pageSpacer" style="height: 10vh; width: 100%"></div>
 <section id="product" class="py-3">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
+                <div class="pageSpacer" style="height: 8vh; width: 100%"></div>
                 <img src="<?php echo $service['service_image'] ?? "./assets/products/1.png" ?>" alt="product" class="img-fluid">
                 <div class="form-row pt-4 font-size-16 font-baloo">
                     <div class="col">
@@ -24,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 py-5">
+            <div class="col-sm-6 py-5 pl-4">
                 <h5 class="font-baloo font-size-20"><?php echo $service['service_name'] ?? "Unknown"; ?></h5>
                 <small>by <?php echo $service['service_brand'] ?? "Brand"; ?></small>
                 <div class="d-flex">

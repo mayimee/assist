@@ -1,3 +1,4 @@
 _top-sale.php		->	Popular Services
 _special-price.php	->	Explore other services
-_new-phones		->	New Services
+_new-phones		    ->	New Services
+_banner-ads        ->  Special Offers
