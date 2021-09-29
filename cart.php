@@ -1,7 +1,7 @@
 <?php
 ob_start();
 // include header.php file
-include ('header.php');
+include ('header_logout.php');
 ?>
 <div class="pageSpacer" style="height: 8vh; width: 100%"></div>
 <?php

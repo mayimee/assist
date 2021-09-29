@@ -38,6 +38,7 @@ echo '<script>alert("Your current password is wrong")</script>';
     <head>
  <title>Assist - Change Password</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+<link rel="icon" href="assets/images/Icon_Search.png" type="image/x-icon">
 <script type="text/javascript">
 function checkpass()
 {

@@ -2,7 +2,7 @@
 
     require('server.php');
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    if (isset($_POST['submitcustomerlogin']))
     {
         $email_address =$_POST["email_address"];
         $password = $_POST["password"];

@@ -1,7 +1,7 @@
 <?php
 ob_start();
 // include header.php file
-include ('header.php');
+include ('header_logout.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@ include ('header.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assist - Booking Confirmation</title>
+    <title>Assist | We make life easier!</title>
 </head>
 <body class="text-center my-5">
     <div class="container">

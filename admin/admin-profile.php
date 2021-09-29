@@ -29,6 +29,7 @@ $query->execute();
     <head>
  <title>Assist - Admin Profile</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+<link rel="icon" href="assets/images/Icon_Search.png" type="image/x-icon">
 
 </head>
     <body>
