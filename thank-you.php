@@ -24,7 +24,7 @@ include ('header_logout.php');
 
         <br>
         <h2 class="align-center">
-        “Thank you for using Assist! Your booking confirmation no. is 982373.”
+        Thank you for using Assist! Your booking confirmation no. is 982373.
         </h2>
         <p>Please check your email for the details of your booking.</p>
     </main>
