@@ -11,7 +11,6 @@
             $Cart->saveForLater($_POST['service_id']);
         }
     }
-
     
 
 ?>
@@ -47,11 +46,6 @@
 
                         <h5 class="font-baloo font-size-20"><?php echo $service['service_name'] ?? "Unknown"; ?></h5>
                         <small>by <?php echo $service['service_type'] ?? "Category"; ?></small>
-                        
-                        
-
-                        
-                        
 
                         <!-- product rating -->
                         <div class="d-flex">

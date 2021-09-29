@@ -1,64 +1,30 @@
 <?php
 
     require('server.php');
-    
 
-    session_start();
-
-    if ($_SERVER[""])
-    $status = $_SESSION['status'];
-
-    echo "<script> console.log('$status'); </script>";
-
-
-    if(isset($_POST['submitcustomerlogin']))
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        $email_address = trim($_POST['email_address']);
-        $password = trim($_POST['password']);
+        $email_address =$_POST["email_address"];
+        $password = $_POST["password"];
 
-        if(empty($email_address || $password))
+        $sql = "SELECT * FROM customer WHERE email_address='$email_address';";
+
+        $result = mysqli_query($connect, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['first_name'] = $row['first_name'];
+        
+        if(empty($result) || $email_address == "" || $password == "")
         {
-            echo "Please provide your email address and password.";
-
-            echo "<script> console.log('$status'); </script>";
+            $_SESSION['status'] = 'invalid';
+            header("location: customerlogin.php");
+            echo "<script> alert('You have entered an invalid email address and password.'); </script>";
         }
         else
         {
-            $querySelect = "SELECT * FROM customer WHERE email_address = '$email_address';";
-            $sqlCustLogin = mysqli_query($connect, $querySelect);
-            $row = mysqli_fetch_assoc($sqlCustLogin);
-
-            echo "<script> console.log('$status'); </script>";
-
-            $current_password = $row['password'];
-
-            if(password_verify($password, $current_password))
-            {
-                $_SESSION['email_address'] = $row['email_address'];
-                $userAccess = "Customer";
-                header('location: cart.php');
-            }
-            else
-            {
-                $errorMsg = 'Login Failed. Please input registered email address and password.';
-
-                echo "<script> alert('$errorMsg'); </script>";
-            }
-
-            if(mysqli_num_rows($sql) > 0 && password_verify($password, $current_password))
-            {
-                $_SESSION['status'] = 'valid';
-                $_SESSION['userAccess'] = 'Customer';
-                $_SESSION['customer_id'] = $row('customer_id');
-                header('location: index.php');
-            }
-            else
-            {
-                $_SESSION['status'] = 'invalid';
-                echo "Please create an account.";
-            }
-
+            $_SESSION['status'] = 'valid';
+            header("location: cart.php");
         }
+
     }
 
 ?>
@@ -75,9 +41,7 @@
 </head>
 <body>
 
-    <?php
-        include ('header.php');
-    ?>
+    <?php include ('header.php');?>
 
     <main class="my-5 p-5">
         <br>
