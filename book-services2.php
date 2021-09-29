@@ -161,7 +161,7 @@ foreach($result2 as $row)
 							 <li class="text-info text-dark">ADDITIONAL INFORMATION:</li>
 							 <li><textarea type="text" class="form-control" name="addinfo" required="true"></textarea></li>
 						 </ul>					
-						 <input type="submit" name="submit" value="Book">					 
+						 <input type="submit" name="submit" value="Book" class="btn btn-primary">					 
 					 </form>
 				 </div>
 				 <div class="col-md-6 contact-right">
@@ -174,11 +174,11 @@ foreach($result2 as $row)
 		 </div>
 		 <br>
 		 <br>
-		<?php include_once('footer.php');?>
+		
 	 </div>
 </div>
 <!---->
-
+<?php include_once('footer.php');?>
 <!---->
 </body>
 </html>

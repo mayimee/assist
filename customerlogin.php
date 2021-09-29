@@ -58,7 +58,7 @@
                 <label for="floatingInputp">Password</label>
             </div>
             <br>
-            <div class="col-md-6 mx-auto">
+            <div class="col-6 d-grid gap-2 mx-auto">
                 <button type="submit" name="submitcustomerlogin" class="btn btn-primary btn-md">Sign In</button>
             </div>
         </form>
