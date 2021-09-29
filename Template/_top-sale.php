@@ -41,7 +41,7 @@
                             <span><i class="far fa-star"></i></span>
                         </div>
                         <div class="price py-2">
-                            <span>$<?php echo $service['service_price'] ?? '0' ; ?></span>
+                            <span>P<?php echo $service['service_price'] ?? '0' ; ?></span>
                         </div>
                         <form method="post">
                             <input type="hidden" name="service_id" value="<?php echo $service['service_id'] ?? '1'; ?>">

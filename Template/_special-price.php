@@ -1,7 +1,7 @@
 <!-- Special Price -->
 <?php
-    $brand = array_map(function ($pro){ return $pro['service_type']; }, $product_shuffle);
-    $unique = array_unique($brand);
+    $category = array_map(function ($pro){ return $pro['service_type']; }, $product_shuffle);
+    $unique = array_unique($category);
     sort($unique);
     shuffle($product_shuffle);
 
@@ -22,15 +22,15 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
         <div id="filters" class="button-group text-right font-baloo font-size-16">
             <button class="btn is-checked" data-filter="*">All Categories</button>
             <?php
-                array_map(function ($brand){
-                    printf('<button class="btn" data-filter=".%s">%s</button>', $brand, $brand);
+                array_map(function ($category){
+                    printf('<button class="btn" data-filter=".%s">%s</button>', $category, $category);
                 }, $unique);
             ?>
         </div>
 
         <div class="grid">
             <?php array_map(function ($service) use($in_cart){ ?>
-            <div class="grid-item <?php echo $service['service_type'] ?? "Brand" ; ?>" >
+            <div class="grid-item <?php echo $service['service_type'] ?? "Category" ; ?>" >
             <div class="item mb-4" style="border: 1px solid #E4E5E8">    
                     <div class="product font-rale pb-3 mx-2 bg-light">
                         <a href="<?php printf('%s?service_id=%s', 'product.php',  $service['service_id']); ?>"><img src="<?php echo $service['service_image'] ?? "./assets/products/13.png"; ?>" style="height: 150px; width: 204px" alt="product1" class="img-fluid"></a>
@@ -44,7 +44,7 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
                                 <span><i class="far fa-star"></i></span>
                             </div>
                             <div class="price py-2">
-                                <span>$<?php echo $service['service_price'] ?? 0 ?></span>
+                                <span>P<?php echo $service['service_price'] ?? 0 ?></span>
                             </div>
                             <form method="post">
                                 <input type="hidden" name="service_id" value="<?php echo $service['service_id'] ?? '1'; ?>">
