@@ -44,6 +44,7 @@ echo "<script>alert('Invalid Details');</script>";
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>       
         <title>Assist Admin - Login Page</title>
+        <link rel="icon" href="assets/images/Icon_Search.png" type="image/x-icon">
         <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
         <link rel="stylesheet" href="assets/css/colors.css">
     </head>

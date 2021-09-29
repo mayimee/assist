@@ -14,6 +14,8 @@ if (strlen($_SESSION['odmsaid']==0)) {
     <head>
         <title>Assist - Search Booking</title>
 
+        <link rel="icon" href="assets/images/Icon_Search.png" type="image/x-icon">
+
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 
         <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">

@@ -49,7 +49,8 @@ echo "<script>window.location.href ='cart.php'</script>";
 <!DOCTYPE html>
 <html>
 <head>
-<title>Assist || Appointment Form</title>
+<title>Assist | We make life easier!</title>
+<link rel="icon" href="assets/images/Icon_Search.png" type="image/x-icon">
 <link href="css/bootstrap2.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style2.css" rel="stylesheet" type="text/css" media="all" />
@@ -89,7 +90,7 @@ echo "<script>window.location.href ='cart.php'</script>";
 
 </head>
 <body></body>
-<?php include('header.php');?>
+<?php include('header_logout.php');?>
 <div class="contact content">
 	 <div class="container"> 		 
 		 <ol class="breadcrumb">

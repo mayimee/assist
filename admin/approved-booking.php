@@ -13,6 +13,7 @@ if (strlen($_SESSION['odmsaid']==0)) {
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
         <title>Assist - Approved Bookings</title>
+        <link rel="icon" href="assets/images/Icon_Search.png" type="image/x-icon">
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 
