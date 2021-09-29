@@ -15,17 +15,12 @@
     
 
 ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <div class="pageSpacer" style="height: 10vh; width: 100%"></div>
 <section id="cart" class="py-3 mb-5">
     <div class="container-fluid w-75">
         <h5 class="font-baloo font-size-20">Shopping Cart</h5>
+        
 
         <!--  shopping cart services   -->
         <div class="row">
@@ -74,7 +69,7 @@
                                 <button data-id="<?php echo $service['service_id'] ?? '0'; ?>" class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
                             </div>
 
-                            <form method="get" action="book-services2.php?bookid=1">
+                            <form method="get" action="book-services2.php?bookid=1">                     
                             <button type="submit" class="btn btn-warning mt-3 ml-3">Book Appointment</button>
                             </form>
 
