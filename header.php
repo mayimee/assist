@@ -49,35 +49,7 @@
 
             <!-- Login/Logout -->
 
-            <?php
-            
-                $status = $_SESSION['status'];
-
-                echo "<script> console.log('Access: $status') </script>";
-                
-                
-
-                if(isset($_SESSION['status']) === 'invalid')
-                {
-            
-            ?>
-
             <a href="customerlogin.php" class="px-3 border-right border-left text-dark">Login</a>
-
-
-            <?php
-
-                }
-                else if (isset($_SESSION['first_name']) === 'valid')
-                {
-
-            ?>
-                Hello again! &nbsp;
-                <a href="logout.php" class="px-3 border-right border-left text-dark">Logout</a>
-
-            <?php
-                }
-            ?>
 
             <a href="admin/login2.php" class="px-3 text-dark">Be a Service Provider</a>
         </div>
