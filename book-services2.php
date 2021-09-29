@@ -75,6 +75,18 @@ echo "<script>window.location.href ='cart.php'</script>";
 			});
 		</script>
 
+		<style>
+
+				/* Chrome, Safari, Edge, Opera */
+				input::-webkit-outer-spin-button,
+				input::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+
+
+		</style>
+
 </head>
 <body></body>
 <?php include('header.php');?>
@@ -103,7 +115,7 @@ echo "<script>window.location.href ='cart.php'</script>";
 						 <ul>
 						 	 <ul>
 							 <li class="text-info">Mobile Number: </li>
-							 <li><input type="text" class="text" name="mobnum" required="true" maxlength="10" pattern="[0-9]+"></li>
+							 <li><input type="number" class="form-control" name="mobnum" required="true" maxlength="10" pattern="[0-9]+"></li>
 						 </ul>
 							 <li class="text-info">Date: </li>
 							 <li><input type="date" id="serviceDate" class="form-control" min="" onfocus="this.min=new Date().toISOString().split('T')[0]"></li>

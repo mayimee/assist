@@ -5,16 +5,7 @@
 
     session_start();
 
-    if ($_SESSION['status'] == 'invalid' || empty($_SESSION['status']))
-    {
-        $_SESSION['status'] = 'invalid';
-    }
-
-    if ($_SESSION['status'] == 'valid')
-    {
-        header('location: index.php');
-    }
-
+    if ($_SERVER[""])
     $status = $_SESSION['status'];
 
     echo "<script> console.log('$status'); </script>";
@@ -43,9 +34,9 @@
 
             if(password_verify($password, $current_password))
             {
-                $_SESSION['first_name'] = $row['first_name'];
+                $_SESSION['email_address'] = $row['email_address'];
                 $userAccess = "Customer";
-                header('location: customerprofile.php');
+                header('location: cart.php');
             }
             else
             {
@@ -103,11 +94,10 @@
                 <label for="floatingInputp">Password</label>
             </div>
             <br>
-            <div class="col-6 mx-auto">
+            <div class="col-md-6 mx-auto">
                 <button type="submit" name="submitcustomerlogin" class="btn btn-primary btn-md">Sign In</button>
             </div>
         </form>
-        <span class="error"><?php echo $errorMsg; ?></span>
     </main>
 
     <div>
