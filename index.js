@@ -84,7 +84,7 @@ $(document).ready(function(){
         let $price = $(`.product_price[data-id='${$(this).data("id")}']`);
 
         // change product price using ajax call
-        $.ajax({url: "template/ajax.php", type : 'post', data : { serviceid : $(this).data("id")}, success: function(result){
+        $.ajax({url: "./ajax.php", type : 'post', data : { serviceid : $(this).data("id")}, success: function(result){
                 let obj = JSON.parse(result);
                 let service_price = obj[0]['service_price'];
 
@@ -132,5 +132,34 @@ $(document).ready(function(){
             }}); // closing ajax request
     }); // closing qty down button
 
+
+});
+
+
+//New increment decrement button
+$(document).ready(function () {
+
+    $('.increment-btn').click(function (e) {
+        e.preventDefault();
+        var incre_value = $(this).parents('.quantity').find('.qty-input').val();
+        var value = parseInt(incre_value, 10);
+        value = isNaN(value) ? 0 : value;
+        if(value<10){
+            value++;
+            $(this).parents('.quantity').find('.qty-input').val(value);
+        }
+
+    });
+
+    $('.decrement-btn').click(function (e) {
+        e.preventDefault();
+        var decre_value = $(this).parents('.quantity').find('.qty-input').val();
+        var value = parseInt(decre_value, 10);
+        value = isNaN(value) ? 0 : value;
+        if(value>1){
+            value--;
+            $(this).parents('.quantity').find('.qty-input').val(value);
+        }
+    });
 
 });
