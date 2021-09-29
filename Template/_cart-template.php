@@ -40,16 +40,34 @@
                     <div class="col-sm-8">
 
                         <h5 class="font-baloo font-size-20"><?php echo $service['service_name'] ?? "Unknown"; ?></h5>
-                        <small>by <?php echo $service['service_companyName'] ?? "Company Name"; ?></small>
+                        <small>by <?php echo $service['service_type'] ?? "Category"; ?></small>
+                        
                         
 
+                        <!-- product rating -->
+                        <div class="d-flex">
+                            <div class="rating text-warning font-size-12">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                            <a href="#" class="px-2 font-rale font-size-14">20,534 ratings</a>
+                        </div>
+                        <!--  !product rating-->
+
                         <!-- product qty -->
-                        <div class="qty d-flex pt-2">
-                            <div class="d-flex font-rale w-25">
+                        <div class="d-flex pt-2">
+                            <div class="qty d-flex font-rale w-25">
                                 <button class="qty-up border bg-light" data-id="<?php echo $service['service_id'] ?? '0'; ?>"><i class="fas fa-angle-up"></i></button>
                                 <input type="text" data-id="<?php echo $service['service_id'] ?? '0'; ?>" class="qty_input border px-2 w-100 bg-light" disabled value="1" placeholder="1">
                                 <button data-id="<?php echo $service['service_id'] ?? '0'; ?>" class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
                             </div>
+
+                            <form method="get" action="book-services2.php?bookid=1">
+                            <button type="submit" class="btn btn-warning mt-3 ml-3">Book Appointment</button>
+                            </form>
 
                             <form method="post">
                                 <input type="hidden" value="<?php echo $service['service_id'] ?? 0; ?>" name="service_id">
@@ -83,9 +101,9 @@
             <!-- subtotal section-->
             <div class="col-sm-3">
                 <div class="sub-total border text-center mt-2">
-                    <h6 class="font-size-10 font-rale text-success py-1 pl-4"><i class="fas fa-check"></i> 7 Days Service Warranty</h6>
-                    <h6 class="font-size-10 font-rale text-success py-1 pl-4"><i class="fas fa-check"></i> On-time Completion</h6>
-                    <h6 class="font-size-10 font-rale text-success py-1 pl-4"><i class="fas fa-check"></i> Satisfaction Guaranteed</h6>
+                    <h6 class="font-size-9 font-rale text-success py-1 pl-4 text-center"><i class="fas fa-check"></i> 7 Days Service Warranty</h6>
+                    <h6 class="font-size-9 font-rale text-success py-1 pl-4 text-center"><i class="fas fa-check"></i> On-time Completion</h6>
+                    <h6 class="font-size-9 font-rale text-success py-1 pl-4 text-center"><i class="fas fa-check"></i> Satisfaction Guaranteed</h6>
                     <div class="border-top py-4">
 
                         <h5 class="font-baloo font-size-20">Subtotal ( <?php echo isset($subTotal) ? count($subTotal) : 0; ?> item):&nbsp; <span class="text-danger">P<span class="text-danger" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?></span> </span> </h5>

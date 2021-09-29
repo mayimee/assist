@@ -3,6 +3,7 @@
     $service_id = $_GET['service_id'] ?? 1;
     foreach ($product->getData() as $service) :
         if ($service['service_id'] == $service_id) :
+    
 ?>
 <div class="pageSpacer" style="height: 12vh; width: 100%"></div>
 <section id="product" class="py-3">
@@ -11,20 +12,7 @@
             <div class="col-sm-6">
                 <div class="pageSpacer" style="height: 6vh; width: 100%"></div>
                 <img src="<?php echo $service['service_image'] ?? "./assets/products/1.png" ?>" alt="product" class="img-fluid">
-                <div class="form-row pt-4 font-size-16 font-baloo">
-                    <div class="col">
-                        <button type="submit" class="btn btn-danger form-control">Proceed to Buy</button>
-                    </div>
-                    <div class="col">
-                        <?php
-                        if (in_array($service['service_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
-                            echo '<button type="submit" disabled class="btn btn-success font-size-16 form-control">In the Cart</button>';
-                        }else{
-                            echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-16 form-control">Add to Cart</button>';
-                        }
-                        ?>
-                    </div>
-                </div>
+                
             </div>
             <div class="col-sm-6 py-5 pl-4">
                 <h5 class="font-baloo font-size-20"><?php echo $service['service_name'] ?? "Unknown"; ?></h5>
@@ -86,24 +74,60 @@
 
                     
                         <!--<h6   h6 class="font-baloo">Service Date : </h6>  -->
-
-                        <!-- Book Appointment Button -->
+                        
+                        
+                        <!-- Book Appointment Button
                             <form method="get" action="book-services2.php?bookid=1">
                             <button type="submit" class="btn btn-warning mt-3">Book Appointment</button>
                             </form>
+                        -->
                    
                     </div>
                     <!-- !order-details -->
 
                         <!-- product qty section -->
                         <div class="qty d-flex">
-                            <h6 class="font-baloo">Qty</h6>
-                            <div class="ml-1 d-flex font-rale">
-                                <button class="qty-up border bg-light" data-id="pro1"><i class="fas fa-angle-up"></i></button>
-                                <input type="text" data-id="pro1" class="qty_input border px-2 w-50 bg-light" disabled value="1" placeholder="1">
-                                <button data-id="pro1" class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
+                            <!-- old increment/decrement
+                            <div class="d-flex">
+                                <h6 class="font-baloo">Qty</h6>
+                                <div class="ml-1 d-flex font-rale">
+                                    <button class="qty-up border bg-light" data-id="pro1"><i class="fas fa-angle-up"></i></button>
+                                    <input type="text" data-id="pro1" class="qty_input border px-2 w-50 bg-light" disabled value="1" placeholder="1">
+                                    <button data-id="pro1" class="qty-down border bg-light"><i class="fas fa-angle-down r-5"></i></button>
+                                </div>
                             </div>
-                        </div>
+                        -->
+                        <div style="display: flex">
+                            <div class="d-flex">
+                                <h6 class="font-baloo mr-2">Qty</h6>
+                                <div class="cart-product-quantity" width="130px">
+                                    <div class="input-group quantity">
+                                        <div class="input-group-prepend decrement-btn" data-id="<?php echo $item['service_id'] ?? '0'; ?>">
+                                            <span class="input-group-text">-</span>
+                                        </div>
+                                        <input type="text" class="qty-input form-control" style="width: 60px" maxlength="2" max="10" value="1" data-id="<?php echo $item['service_id'] ?? '0'; ?>">
+                                        <div class="input-group-append increment-btn" data-id="<?php echo $item['service_id'] ?? '0'; ?>">
+                                            <span class="input-group-text">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row pt-4 font-size-16 font-baloo">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-danger form-control px-2" style="width: 100px">Checkout</button>
+                                </div>
+                                <div class="col">
+                                    <?php
+                                    if (in_array($service['service_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
+                                        echo '<button type="submit" disabled class="btn btn-success font-size-16 form-control px-2">In the Cart</button>';
+                                    }else{
+                                        echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-16 form-control px-2">Add to Cart</button>';
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </div>                        
+                        
                         <!-- !product qty section -->
                     </div>
                 </div>
