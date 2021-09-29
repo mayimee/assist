@@ -55,6 +55,8 @@
                         </form>
                     </div> 
                 </li>
+                
+                <!-- Calendar
                 <li class="nav-item">
                     <div class="calendarContainer">
                         <form class="calendar">
@@ -63,6 +65,8 @@
                         </form>
                     </div>
                 </li>
+-->
+
                 <li class="nav-item">
                     <div class="searchAddressContainer">
                         <form class="searchAddress" action="action_page.php">
