@@ -35,7 +35,7 @@ padding:0;
 }
 
 .breadcrumb li.active{
-	color:#FF008C;
+	/* color:#FF008C; */
 	font-size:1em;
 	font-weight:500;
 }
@@ -76,7 +76,7 @@ padding:0;
 	font-size:14px;
 }
 .event-grid ul li.hedding{
-	color: #FF008C;
+	/* color: #FF008C; */
 	font-size: 22px;
 	font-weight: 600;
 }
@@ -131,8 +131,8 @@ padding: 0 0 16px 0;
 	-moz-border-radius: 5px;
 	-o-border-radius: 5px;
 	-ms-border-radius: 5px;
-	border:2px solid #FF008C;
-	color: #FF008C;
+	/* border:2px solid #FF008C;
+	color: #FF008C; */
 }
 .event-grids:hover div.event-grid ul li.yellow a{
 	background: transparent;
@@ -173,7 +173,7 @@ padding: 0 0 16px 0;
 	margin-top:2.5em;
 }
 .contact-main h3{
-	color:#FF008C;
+	/* color:#FF008C; */
 	font-size:2.2em;
 	line-height:1.3em;
 	width:80%;
@@ -229,16 +229,16 @@ padding: 0 0 16px 0;
 }
 .contact-left input[type="submit"] {
   color: #fff;
-  background: rgba(255, 0, 140, 0.59);
+  /* background: rgba(255, 0, 140, 0.59); */
   padding: 5px 15px;
   display: inline-block;
   margin:0em 0 0 7em;
   outline:none;
   border:none;
 }
-.contact-left input[type="submit"]:hover{
+/* .contact-left input[type="submit"]:hover{
 	background:rgba(255, 0, 140, 0.77);
-}
+} */
 .contact-map{
 	margin-top:2em;
 }
