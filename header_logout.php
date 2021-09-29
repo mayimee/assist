@@ -67,7 +67,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav m-auto font-rubik">
                 <li class="nav-item active">
-                    <a href="index.php"><img src="./assets/images/Assist2_NavBar.png" class="navBrand"></a>
+                    <a href="index2.php"><img src="./assets/images/Assist2_NavBar.png" class="navBrand"></a>
                 </li>
                 <li class="nav-item active">
                     <div class="searchServiceContainer">
