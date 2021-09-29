@@ -18,8 +18,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <!-- owl carousel -->
         <div class="owl-carousel owl-theme">
             <?php foreach ($product_shuffle as $service) { ?>
-                <div class="item pb-3 bg-light mx-2" style="border: 1px solid #E4E5E8">
-                    <div class="product font-rale">
+                <div class="item bg-light mx-2" style="border: 1px solid #E4E5E8">
+                    <div class="product font-rale pb-3">
                         <a href="<?php printf('%s?service_id=%s', 'product.php',  $service['service_id']); ?>"><img src="<?php echo $service['service_image'] ?? "./assets/products/1.png"; ?>" style="height: 150px" alt="product1" class="img-fluid"></a>
                         <div class="text-center">
                             <h6><?php echo  $service['service_name'] ?? "Unknown";  ?></h6>
