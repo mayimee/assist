@@ -8,14 +8,14 @@
 
     $connect = mysqli_connect($host, $root, $password, $database, $port);
 
-    if (mysqli_connect_error())
-    {
-        echo "Unable to connect to MySQL. " . mysqli_connect_error();
-    }
-    else
-    {
-        echo "DB connected successfully.";
-    }
+    // if (mysqli_connect_error())
+    // {
+    //     echo "Unable to connect to MySQL. " . mysqli_connect_error();
+    // }
+    // else
+    // {
+    //     echo "DB connected successfully.";
+    // }
 
 
 ?>

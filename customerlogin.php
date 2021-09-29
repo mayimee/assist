@@ -12,7 +12,7 @@
 
     if ($_SESSION['status'] == 'valid')
     {
-        header('location: customerprofile.php');
+        header('location: index.php');
     }
 
     $status = $_SESSION['status'];
@@ -107,6 +107,7 @@
                 <button type="submit" name="submitcustomerlogin" class="btn btn-primary btn-md">Sign In</button>
             </div>
         </form>
+        <span class="error"><?php echo $errorMsg; ?></span>
     </main>
 
     <div>

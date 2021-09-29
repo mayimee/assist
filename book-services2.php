@@ -106,7 +106,7 @@ echo "<script>window.location.href ='cart.php'</script>";
 							 <li><input type="text" class="text" name="mobnum" required="true" maxlength="10" pattern="[0-9]+"></li>
 						 </ul>
 							 <li class="text-info">Date: </li>
-							 <li><input type="date" class="form-control" name="edate" required="true"></li>
+							 <li><input type="date" id="serviceDate" class="form-control" min="" onfocus="this.min=new Date().toISOString().split('T')[0]"></li>
 						 </ul>					 
 						 <ul>
 							 <li class="text-info">Time:</li>
