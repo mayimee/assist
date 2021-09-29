@@ -22,7 +22,7 @@
         else
         {
             $_SESSION['status'] = 'valid';
-            header("location: cart.php");
+            header("location: index2.php");
         }
 
     }

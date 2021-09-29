@@ -35,6 +35,7 @@
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/colors.css">
 
     <?php
     // require functions.php file
@@ -74,9 +75,9 @@
                 </li>
                 <li class="nav-item active">
                     <div class="searchServiceContainer">
-                        <form class="searchService" action="action_page.php">
-                            <input type="text" placeholder="Search services..." id="searchService">
-                            <button type="submit"><span class="fa fa-search"></span></button>
+                        <form class="searchService" method="post" action="search.php">
+                            <input type="text" placeholder="Search services..." name="search">
+                            <button type="submit" name="submit" value="search"><span class="fa fa-search"></span></button>
                         </form>
                     </div> 
                 </li>

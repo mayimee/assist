@@ -5,5 +5,6 @@
 
     <link href="css/style_Marielle.css" rel="stylesheet">
     <link rel="icon" href="assets/images/Icon_Search.png" type="image/x-icon">
+    <link href="css/colors.css" rel="stylesheet">
 
 </head>
