@@ -11,6 +11,12 @@
         }
     }
 ?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <section id="cart" class="py-3 mb-5">
     <div class="container-fluid w-75">
@@ -38,6 +44,9 @@
                         <form method="get" action="book-services2.php?bookid=1">
                             <button type="submit" class="btn btn-warning mt-3">Book Appointment</button>
                         </form>
+
+                        
+                        
 
                         <!-- product rating -->
                         <div class="d-flex">

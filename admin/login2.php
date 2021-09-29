@@ -106,7 +106,7 @@ echo "<script>alert('Invalid Details');</script>";
                                         </button>
                                         <div class="mt-30">
                                             
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="forgot-password.php">
+                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="#">
                                                 <i class="fa fa-warning mr-5"></i> Forgot Password
                                             </a>
                                             <a href="../index.php"><strong class="txtColorTheme">Back to Home</strong></a>
