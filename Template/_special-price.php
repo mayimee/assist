@@ -31,8 +31,8 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
         <div class="grid">
             <?php array_map(function ($service) use($in_cart){ ?>
             <div class="grid-item <?php echo $service['service_type'] ?? "Brand" ; ?>" >
-            <div class="item mb-3 mx-2" style="border: 1px solid #E4E5E8">    
-                    <div class="product font-rale pb-3 bg-light">
+            <div class="item mb-4" style="border: 1px solid #E4E5E8">    
+                    <div class="product font-rale pb-3 mx-2 bg-light">
                         <a href="<?php printf('%s?service_id=%s', 'product.php',  $service['service_id']); ?>"><img src="<?php echo $service['service_image'] ?? "./assets/products/13.png"; ?>" style="height: 150px; width: 204px" alt="product1" class="img-fluid"></a>
                         <div class="text-center">
                             <h6><?php echo $service['service_name'] ?? "Unknown"; ?></h6>
