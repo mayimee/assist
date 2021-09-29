@@ -101,27 +101,27 @@ echo "<script>window.location.href ='cart.php'</script>";
 		 <br>
 			 <div class="contact-grids">
 				 <div class="col-md-6 contact-left">
-					 <p>Please fill out the form below with your details.</p>
+					 <p class="text-dark font-weight-bold">Please fill out the form below with your details.</p>
 					 <form method="post">
 					 	
 						 <ul>
-							 <li class="text-info">Name: </li>
+							 <li class="text-info text-dark">NAME: </li>
 							 <li><input type="text" class="form-control" name="name" required="true"></li>
 						 </ul>					 				 
 						 <ul>
-							 <li class="text-info">Email: </li>
+							 <li class="text-info text-dark">EMAIL: </li>
 							 <li><input type="email" class="form-control" name="email" required="true"></li>
 						 </ul>
 						 <ul>
 						 	 <ul>
-							 <li class="text-info">Mobile Number: </li>
+							 <li class="text-info text-dark">MOBILE NUMBER: </li>
 							 <li><input type="number" class="form-control" name="mobnum" required="true" maxlength="10" pattern="[0-9]+"></li>
 						 </ul>
-							 <li class="text-info">Date: </li>
-							 <li><input type="date" id="serviceDate" class="form-control" min="" onfocus="this.min=new Date().toISOString().split('T')[0]"></li>
+							 <li class="text-info text-dark">DATE: </li>
+							 <li><input type="date" id="serviceDate" name="edate" class="form-control" min="" onfocus="this.min=new Date().toISOString().split('T')[0]"></li>
 						 </ul>					 
 						 <ul>
-							 <li class="text-info">Time:</li>
+							 <li class="text-info text-dark">TIME:</li>
 							 <li><select type="text" class="form-control" name="est" required="true">
 							 	<option value="">Select Time</option>
 							 	<option value="8 a.m">8 a.m</option>
@@ -136,30 +136,12 @@ echo "<script>window.location.href ='cart.php'</script>";
 							 	<option value="5 p.m">5 p.m</option>
 							 </select></li>
 						 </ul>
-						 <!-- <ul>
-							 <li class="text-info">Event Finish Time:</li>
-							 <li><select type="text" class="form-control" name="eetime" required="true">
-							 	<option value="">Select Finish Time</option>
-							 	<option value="9 a.m">9 a.m</option>
-							 	<option value="10 a.m">10 a.m</option>
-							 	<option value="11 a.m">11 a.m</option>
-							 	<option value="12 p.m">12 a.m</option>
-							 	<option value="1 p.m">1 p.m</option>
-							 	<option value="2 p.m">2 p.m</option>
-							 	<option value="3 p.m">3 p.m</option>
-							 	<option value="4 p.m">4 p.m</option>
-							 	<option value="5 p.m">5 p.m</option>
-							 	<option value="6 p.m">6 p.m</option>
-							 </select></li>
-						 </ul> -->
+						 
 						 <ul>
-							 <li class="text-info">Address:</li>
+							 <li class="text-info text-dark">ADDRESS:</li>
 							 <li><textarea type="text" class="form-control" name="vaddress" required="true" ></textarea></li>
 						 </ul>
-						 <!-- <ul>
-							 <li class="text-info">Type of Event:</li>
-							 <li><select type="text" class="form-control" name="eventtype" required="true" >
-							 	<option value="">Choose Event Type</option> -->
+
 							 	<!-- <?php 
 
 $sql2 = "SELECT * from   tbleventtype ";
@@ -175,7 +157,7 @@ foreach($result2 as $row)
 							 <!-- </select></li>
 						 </ul>	 -->
 						 <ul>
-							 <li class="text-info">Additional Information:</li>
+							 <li class="text-info text-dark">ADDITIONAL INFORMATION:</li>
 							 <li><textarea type="text" class="form-control" name="addinfo" required="true"></textarea></li>
 						 </ul>					
 						 <input type="submit" name="submit" value="Book">					 

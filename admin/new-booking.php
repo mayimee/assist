@@ -76,7 +76,7 @@ foreach($results as $row)
                                         </td>
                                         <?php if($row->Status==""){ ?>
 
-                     <td class="font-w600"><?php echo "Not Updated Yet"; ?></td>
+                     <td class="font-w600"><?php echo "Not yet updated"; ?></td>
 <?php } else { ?>
                                         <td class="d-none d-sm-table-cell">
                                             <span class="badge badge-primary"><?php  echo htmlentities($row->Status);?></span>

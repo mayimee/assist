@@ -22,7 +22,6 @@ padding:0;
 }
 /*--- slider-css --*/
 .content{
-	background:url(../images/main.jpg);
 	padding:5em 0 3em 0;
 }
 
@@ -248,6 +247,7 @@ padding: 0 0 16px 0;
   min-height: 378px;
   border: 18px solid #fff;
 }
+
 /**--Responsive--**/
 @media (max-width: 1024px){
 
