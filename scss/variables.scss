@@ -28,7 +28,7 @@ $navInputMargin: 0.25vw;
 @mixin footerLinksDecoration($textDecoration, $color, $hoverTextDecoration) {
     text-decoration: $textDecoration;
     color: $color;
-    font-size: 14px;
+    font-size: 10px;
     margin-left: .25vw;
     &:hover {
         text-decoration: $hoverTextDecoration;

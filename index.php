@@ -4,7 +4,6 @@
     include ('header.php');
 ?>
 
-<div class=
 <?php
     
     /*  include banner area  */
