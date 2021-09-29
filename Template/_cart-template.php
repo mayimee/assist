@@ -15,6 +15,12 @@
     
 
 ?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <div class="pageSpacer" style="height: 10vh; width: 100%"></div>
 <section id="cart" class="py-3 mb-5">
@@ -41,6 +47,9 @@
 
                         <h5 class="font-baloo font-size-20"><?php echo $service['service_name'] ?? "Unknown"; ?></h5>
                         <small>by <?php echo $service['service_type'] ?? "Category"; ?></small>
+                        
+                        
+
                         
                         
 

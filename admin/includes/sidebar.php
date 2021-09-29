@@ -9,6 +9,16 @@ if (strlen($_SESSION['odmsaid']==0)) {
 
 
   ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/colors.css">
+</head>
+<body>
    <nav id="sidebar">
                 <!-- Sidebar Scroll Container -->
                 <div id="sidebar-scroll">
@@ -38,8 +48,8 @@ if (strlen($_SESSION['odmsaid']==0)) {
                                 <!-- Logo -->
                                 <div class="content-header-item">
                                     <a class="link-effect font-w700" href="dashboard.php">
-                                        <i class="si si-fire text-primary"></i>
-                                        <span class="font-size-xl text-dual-primary-dark">ASSIST</span><span class="font-size-xl txtColorTheme"> Admin</span>
+                                        <i class="si si-fire txtColorTheme"></i>
+                                        <span class="font-size-xl txtColorTheme">ASSIST</span><span class="font-size-xl txtColorTheme"> Admin</span>
                                     </a>
                                 </div>
                                 <!-- END Logo -->
@@ -75,7 +85,7 @@ if($query->rowCount() > 0)
 foreach($results as $row)
 {               ?>
                                     <li class="list-inline-item">
-                                        <a class="link-effect text-dual-primary-dark font-size-xs font-w600 text-uppercase" href="admin-profile.php"><?php  echo $row->AdminName;?></a>
+                                        <a class="link-effect txtColorTheme font-size-xs font-w600 text-uppercase" href="admin-profile.php"><?php  echo $row->AdminName;?></a>
                                     </li><?php $cnt=$cnt+1;}} ?>
                                 </ul>
                             </div>
@@ -87,7 +97,7 @@ foreach($results as $row)
                         <div class="content-side content-side-full">
                             <ul class="nav-main">
                                 <li class="open">
-                                    <a href="dashboard.php"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboards</span></a>
+                                    <a href="dashboard.php"><i class="si si-cup"></i><span class="sidebar-mini-hide txtColorTheme">Dashboards</span></a>
                                    
                                 </li>
                               
@@ -143,3 +153,5 @@ foreach($results as $row)
                 <!-- END Sidebar Scroll Container -->
             </nav>
            <?php }  ?>
+           </body>
+</html>
