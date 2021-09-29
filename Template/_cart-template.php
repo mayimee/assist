@@ -1,5 +1,6 @@
 <!-- Shopping cart section  -->
 <?php
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         if (isset($_POST['delete-cart-submit'])){
             $deletedrecord = $Cart->deleteCart($_POST['service_id']);
@@ -10,7 +11,11 @@
             $Cart->saveForLater($_POST['service_id']);
         }
     }
+
+    
+
 ?>
+
 <div class="pageSpacer" style="height: 10vh; width: 100%"></div>
 <section id="cart" class="py-3 mb-5">
     <div class="container-fluid w-75">
