@@ -1,0 +1,5 @@
+@import "./variables.scss";
+
+.product:hover {
+    box-shadow: 0 0 10px $navBackgroundColor;
+}

@@ -11,16 +11,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 }
 ?>
 <section id="new-phones">
-    <div class="container">
+    <div class="container pt-3">
         <h4 class="font-rubik font-size-20">New Services</h4>
         <hr>
 
         <!-- owl carousel -->
         <div class="owl-carousel owl-theme">
             <?php foreach ($product_shuffle as $service) { ?>
-                <div class="item py-2 bg-light">
+                <div class="item pb-3 bg-light mx-2" style="border: 1px solid #E4E5E8">
                     <div class="product font-rale">
-                        <a href="<?php printf('%s?service_id=%s', 'product.php',  $service['service_id']); ?>"><img src="<?php echo $service['service_image'] ?? "./assets/products/1.png"; ?>" alt="product1" class="img-fluid"></a>
+                        <a href="<?php printf('%s?service_id=%s', 'product.php',  $service['service_id']); ?>"><img src="<?php echo $service['service_image'] ?? "./assets/products/1.png"; ?>" style="height: 150px" alt="product1" class="img-fluid"></a>
                         <div class="text-center">
                             <h6><?php echo  $service['service_name'] ?? "Unknown";  ?></h6>
                             <div class="rating text-warning font-size-12">

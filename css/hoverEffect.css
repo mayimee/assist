@@ -1,0 +1,4 @@
+.product:hover {
+  -webkit-box-shadow: 0 0 10px #fb6f17;
+          box-shadow: 0 0 10px #fb6f17;
+}
