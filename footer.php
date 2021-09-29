@@ -150,7 +150,7 @@
     </div>
     <div class="footerEnd">
         <hr class="footerHR">
-        <p class="footerParagraph">&copy; Assist 2021 | All rights reserved | <a href="#" class="footerEndLink">Terms of Use</a> | <a href="#" class="footerEndLink">Privacy Policy</a></p>
+        <p class="footerParagraph">&copy; Assist 2021 | All rights reserved | <a href="termscondition.php" class="footerEndLink">Terms of Use</a> | <a href="termscondition.php" class="footerEndLink">Privacy Policy</a></p>
     </div>
 </footer>
 

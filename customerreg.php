@@ -68,7 +68,7 @@
                         <span class="error"><?php echo $confirm_passwordErr; ?> </span>
                     </div>
                     <div class="col-md-12 text-center">
-                        <input type="checkbox" name="agree" id="agree" required> This is to certify that all information above are true and valid. I have also read the <a href="termscondition.html" target="_blank">Terms & Conditions</a>.
+                        <input type="checkbox" name="agree" id="agree" required> This is to certify that all information above are true and valid. I have also read the <a href="termscondition.php" target="_blank">Terms & Conditions</a>.
                     </div>
                     <br>
                     <div class="col-md-3 d-grid mx-auto gap-2 mt-5 mb-3">

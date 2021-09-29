@@ -10,9 +10,11 @@
 
 </head>
 <body>
+
+    <?php  require('header.php'); ?>
     
-    <main>
-        <div class="container">
+    <main class="p-5 m-5">
+        <div class="container p-5">
 
             <h3>Terms of Use</h3>
             <p><i>Disclaimer: This website is for educational purposes only.</i></p>
@@ -134,6 +136,8 @@
             </ol>
         </div>
     </main>
+
+    <?php  require('footer.php'); ?>
 
 
 

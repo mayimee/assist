@@ -59,7 +59,7 @@
                 $_SESSION['status'] = 'valid';
                 $_SESSION['userAccess'] = 'Customer';
                 $_SESSION['customer_id'] = $row('customer_id');
-                header('location: customerProfile.php');
+                header('location: index.php');
             }
             else
             {
