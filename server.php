@@ -2,8 +2,8 @@
 
     $host = "localhost";
     $root = "root";
-    $password = "password";
-    $database = "assist_db";
+    $password = "M@rielle9891";
+    $database = "assist";
     $port = "3306";
 
     $connect = mysqli_connect($host, $root, $password, $database, $port);
