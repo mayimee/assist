@@ -1,46 +1,51 @@
 <?php
-session_start();
-error_reporting(0);
-include('includes/dbconnection.php');
-if (strlen($_SESSION['odmsaid']==0)) {
-  header('location:logout2.php');
-  } else{
 
+    session_start();
+    error_reporting(0);
 
+    include('includes/dbconnection.php');
 
-  ?>
+    if (strlen($_SESSION['odmsaid']==0)) 
+    {
+        header('location:logout2.php');
+    } 
+    else{
+
+?>
+
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
-    <head>
-        <title>Assist - Cancelled Bookings</title>
-        <link rel="icon" href="assets/images/Icon_Search.png" type="image/x-icon">
+<head>
+    <title>Assist - Cancelled Bookings</title>
+    <link rel="icon" href="assets/images/Icon_Search.png" type="image/x-icon">
 
-        <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 
-        <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+    <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
-    </head>
-    <body>
+</head>
+
+<body>
         
-        <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
+    <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
            
-           <?php include_once('includes/sidebar.php');?>
+        <?php include_once('includes/sidebar.php');?>
 
-          <?php include_once('includes/header.php');?>
+        <?php include_once('includes/header.php');?>
 
 
-            <!-- Main Container -->
-            <main id="main-container">
-                <!-- Page Content -->
-                <div class="content">
-                    <h2 class="content-heading">Cancelled Bookings</h2>
+        <!-- Main Container -->
+        <main id="main-container">
 
-                   
+            <!-- Page Content -->
+            <div class="content">
+                <h2 class="content-heading">Cancelled Bookings</h2>
 
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
 
                         <div class="block-content block-content-full">
+
                             <!-- DataTables init on table by adding .js-dataTable-full-pagination class, functionality initialized in js/pages/be_tables_datatables.js -->
                             <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
                                 <thead>
@@ -55,18 +60,22 @@ if (strlen($_SESSION['odmsaid']==0)) {
                                         <th class="d-none d-sm-table-cell" style="width: 15%;">Action</th>
                                        </tr>
                                 </thead>
-                                <tbody>
-                                    <?php
-$sql="SELECT * from tblbooking where Status='Cancelled'";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
 
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?>
+                                <tbody>
+
+                                    <?php
+                                        $sql="SELECT * from tblbooking where Status='Cancelled'";
+                                        $query = $dbh -> prepare($sql);
+                                        $query->execute();
+                                        $results=$query->fetchAll(PDO::FETCH_OBJ);
+
+                                        $cnt=1;
+                                        if($query->rowCount() > 0)
+                                        {
+                                        foreach($results as $row)
+                                        {               
+                                    ?>
+
                                     <tr>
                                         <td class="text-center"><?php echo htmlentities($cnt);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->BookingID);?></td>
@@ -78,31 +87,37 @@ foreach($results as $row)
                                         </td>
                                         <?php if($row->Status==""){ ?>
 
-                     <td class="font-w600"><?php echo "Not Updated Yet"; ?></td>
-<?php } else { ?>
+                                        <td class="font-w600"><?php echo "Not Updated Yet"; ?></td>
+                                        
+                                        <?php } else { ?>
+
                                         <td class="d-none d-sm-table-cell">
                                             <span class="badge badge-primary"><?php  echo htmlentities($row->Status);?></span>
                                         </td>
-<?php } ?> 
-                                         <td class="d-none d-sm-table-cell"><a href="view-booking-detail.php?editid=<?php echo htmlentities ($row->ID);?>&&bookingid=<?php echo htmlentities ($row->BookingID);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+
+                                        <?php } ?> 
+
+                                        <td class="d-none d-sm-table-cell"><a href="view-booking-detail.php?editid=<?php echo htmlentities ($row->ID);?>&&bookingid=<?php echo htmlentities ($row->BookingID);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
                                     </tr>
+
                                     <?php $cnt=$cnt+1;}} ?> 
-                                
-                                
-                                  
+                            
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <!-- END Dynamic Table Full Pagination -->
 
-                    <!-- END Dynamic Table Simple -->
+                <!-- END Dynamic Table Simple -->
                 </div>
-                <!-- END Page Content -->
+
+            <!-- END Page Content -->
             </main>
+            
             <!-- END Main Container -->
 
            <?php include_once('includes/footer.php');?>
+
         </div>
         <!-- END Page Container -->
 
@@ -123,6 +138,7 @@ foreach($results as $row)
 
         <!-- Page JS Code -->
         <script src="assets/js/pages/be_tables_datatables.js"></script>
-    </body>
+</body>
 </html>
+
 <?php }  ?>
