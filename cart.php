@@ -1,7 +1,7 @@
 <?php
-ob_start();
-// include header.php file
-include ('header_logout.php');
+    ob_start();
+    // include header.php file
+    include ('header_logout.php');
 ?>
 <div class="pageSpacer" style="height: 8vh; width: 100%"></div>
 <?php
@@ -18,8 +18,8 @@ include ('header_logout.php');
 ?>
 
 <?php
-// include footer.php file
-include ('footer.php');
+    // include footer.php file
+    include ('footer.php');
 ?>
 
 

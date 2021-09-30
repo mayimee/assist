@@ -13,7 +13,6 @@
 
 <?php 
 
-
     require('header.php'); 
     require('validation.php');
 
