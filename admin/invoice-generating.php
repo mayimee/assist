@@ -101,6 +101,13 @@ foreach($results as $row)
 $grandtotal+=$total;
 $cnt=$cnt+1;} ?>
 <tr>
+  <th colspan="2" style="text-align:center;color: black">Add-ons </th>
+<td colspan="2" style="text-align: center;">-</td>
+<tr>
+<tr>
+  <th colspan="2" style="text-align:center;color: red">Discount </th>
+<td colspan="2" style="text-align: center;">-</td>
+<tr>
   <th colspan="2" style="text-align:center;color: blue">Grand Total </th>
 <td colspan="2" style="text-align: center;">₱ <?php  echo $grandtotal;?></td>
 </tr>
