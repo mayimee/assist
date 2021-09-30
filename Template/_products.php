@@ -112,6 +112,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <br>
                             <div class="form-row pt-4 font-size-16 font-baloo">
                                 <div class="col">
                                     <a href="customerlogin.php"><button type="submit" class="btn btn-danger form-control px-2" style="width: 100px">Checkout</button></a>
